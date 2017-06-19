@@ -14,16 +14,20 @@ enum FontType: Int {
     case light
     case bold
     
-    // TODO: Localize
+    /// old: String(describing: self).capitalized
     var name: String {
-//        switch self {
-//        case .all:
-//            
-//        default:
-//            <#code#>
-//        }
-        return String(describing: self).capitalized
+        switch self {
+        case .all:
+            return tr(.all)
+        case .regular:
+            return tr(.regular)
+        case .light:
+            return tr(.light)
+        case .bold:
+            return tr(.bold)
+        }
     }
+    
     var description: String {
         return String(reflecting: self)
     }

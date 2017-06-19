@@ -88,6 +88,7 @@
 		66EFB6791EF6647A0099BF52 /* FontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFB6781EF6647A0099BF52 /* FontFamily.swift */; };
 		66EFB67B1EF664A40099BF52 /* FontType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFB67A1EF664A40099BF52 /* FontType.swift */; };
 		66EFB67E1EF824CA0099BF52 /* Array+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFB67D1EF824CA0099BF52 /* Array+Empty.swift */; };
+		66EFB6821EF840D20099BF52 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFB6811EF840D20099BF52 /* Strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -175,6 +176,7 @@
 		66EFB6781EF6647A0099BF52 /* FontFamily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontFamily.swift; sourceTree = "<group>"; };
 		66EFB67A1EF664A40099BF52 /* FontType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontType.swift; sourceTree = "<group>"; };
 		66EFB67D1EF824CA0099BF52 /* Array+Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Empty.swift"; sourceTree = "<group>"; };
+		66EFB6811EF840D20099BF52 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		7270620A0E46517B4E8F85C1 /* Pods-WeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.release.xcconfig"; sourceTree = "<group>"; };
 		965062DA02ADB5830B54EB51 /* Pods_WeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -213,7 +215,7 @@
 				663216B21EE719B100E17CBD /* PlacesController.swift */,
 				663216B01EE7187600E17CBD /* AutocompleteManager.swift */,
 			);
-			name = Search;
+			path = Search;
 			sourceTree = "<group>";
 		};
 		6629CCE81EF29AE800993446 /* Fonts */ = {
@@ -226,7 +228,7 @@
 				66EFB6561EF47B7D0099BF52 /* FontCell.swift */,
 				6629CCE51EF2983100993446 /* FontPickerManager.swift */,
 			);
-			name = Fonts;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		66B9F0A81EB4DC6000526E2E = {
@@ -268,7 +270,7 @@
 				66BC02491EF30DFE00067061 /* Logger */,
 				66EFB6801EF838170099BF52 /* Resources */,
 			);
-			name = App;
+			path = App;
 			sourceTree = "<group>";
 		};
 		66B9F0C71EB4DCD500526E2E /* Presentation */ = {
@@ -278,7 +280,7 @@
 				66E7DB4B1EE428D300619C71 /* Main */,
 				66E7DB4C1EE428E000619C71 /* Settings */,
 			);
-			name = Presentation;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		66B9F0D31EB4E05A00526E2E /* Classes */ = {
@@ -288,7 +290,7 @@
 				66B9F0CA1EB4E05400526E2E /* NoDelayScrollView.swift */,
 				6629CCE31EF294AC00993446 /* MulticastDelegate.swift */,
 			);
-			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		66B9F0D41EB4E06100526E2E /* Extensions */ = {
@@ -315,7 +317,7 @@
 				66B9F1181EB4F6EF00526E2E /* Alamofire+PromisableMapping.swift */,
 				66957F191EE163C7007B5D21 /* Radians+Extensions.swift */,
 			);
-			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		66B9F0D51EB4E10D00526E2E /* Frameworks */ = {
@@ -340,7 +342,7 @@
 				66B9F1051EB4EE1A00526E2E /* UIImage+Color.swift */,
 				66BC02421EF2F53700067061 /* UserDefaults+Color.swift */,
 			);
-			name = Colors;
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		66B9F0E91EB4E20A00526E2E /* Fonts */ = {
@@ -352,7 +354,7 @@
 				66B9F0F21EB4E33F00526E2E /* AssociationManager.swift */,
 				66B9F0E61EB4E20200526E2E /* Fonts+AdvancedViews.swift */,
 			);
-			name = Fonts;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		66B9F0EA1EB4E22300526E2E /* Support */ = {
@@ -368,7 +370,7 @@
 				66B9F0D31EB4E05A00526E2E /* Classes */,
 				66B9F0D41EB4E06100526E2E /* Extensions */,
 			);
-			name = Support;
+			path = Support;
 			sourceTree = "<group>";
 		};
 		66B9F0EF1EB4E28500526E2E /* Images */ = {
@@ -376,7 +378,7 @@
 			children = (
 				66B9F0EC1EB4E27C00526E2E /* Images.swift */,
 			);
-			name = Images;
+			path = Images;
 			sourceTree = "<group>";
 		};
 		66B9F1041EB4E6B800526E2E /* Localization */ = {
@@ -387,7 +389,7 @@
 				66B9F0FA1EB4E66900526E2E /* Localization+Views.swift */,
 				66B9F0FE1EB4E69500526E2E /* UIApplication+Restart.swift */,
 			);
-			name = Localization;
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		66B9F10B1EB4F47C00526E2E /* Services */ = {
@@ -396,7 +398,7 @@
 				66B9F1071EB4F31E00526E2E /* PhotosService.swift */,
 				66B91DD91EB52EC2002A49F3 /* WeatherService.swift */,
 			);
-			name = Services;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		66B9F10C1EB4F48500526E2E /* Entities */ = {
@@ -406,7 +408,7 @@
 				66B9F1091EB4F32D00526E2E /* Photo.swift */,
 				66B91DDB1EB52F88002A49F3 /* Weather.swift */,
 			);
-			name = Entities;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		66B9F10D1EB4F49400526E2E /* Business */ = {
@@ -415,7 +417,7 @@
 				66B9F10B1EB4F47C00526E2E /* Services */,
 				66B9F10C1EB4F48500526E2E /* Entities */,
 			);
-			name = Business;
+			path = Business;
 			sourceTree = "<group>";
 		};
 		66BC02491EF30DFE00067061 /* Logger */ = {
@@ -427,7 +429,7 @@
 				66BC024C1EF3BFC700067061 /* Watchdog.swift */,
 				66BC02501EF3E21800067061 /* NetworkActivityLogger.swift */,
 			);
-			name = Logger;
+			path = Logger;
 			sourceTree = "<group>";
 		};
 		66E7DB4B1EE428D300619C71 /* Main */ = {
@@ -441,7 +443,7 @@
 				66B91DDF1EB541A3002A49F3 /* ForecastCell.swift */,
 				66957F1B1EE16F71007B5D21 /* Emitter.swift */,
 			);
-			name = Main;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		66E7DB4C1EE428E000619C71 /* Settings */ = {
@@ -452,16 +454,17 @@
 				6629CCE71EF29AD000993446 /* Search */,
 				6629CCE81EF29AE800993446 /* Fonts */,
 			);
-			name = Settings;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		66EFB6801EF838170099BF52 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				66EFB6811EF840D20099BF52 /* Strings.swift */,
 				66B9F0BB1EB4DC6000526E2E /* Assets.xcassets */,
 				663216BB1EE71C7200E17CBD /* Localizable.strings */,
 			);
-			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,8 +474,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66B9F0C31EB4DC6000526E2E /* Build configuration list for PBXNativeTarget "WeatherApp" */;
 			buildPhases = (
-				66EFB67F1EF837EB0099BF52 /* SwiftGen */,
 				4ACDBF25CC016BEDCA1C58F1 /* [CP] Check Pods Manifest.lock */,
+				66EFB67F1EF837EB0099BF52 /* SwiftGen */,
 				66B9F0AD1EB4DC6000526E2E /* Sources */,
 				66B9F0AE1EB4DC6000526E2E /* Frameworks */,
 				66EFB67C1EF7BA640099BF52 /* Swiftlint */,
@@ -568,7 +571,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		66B9F0C81EB4DEC300526E2E /* Carthage copy */ = {
@@ -617,7 +620,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PROJECT_DIR/WeatherApp/Resources/Localizable.strings\" --output \"$PROJECT_DIR/WeatherApp/Resources/Strings.swift\" -t swift3";
+			shellScript = "if which swiftgen >/dev/null; then\n    swiftgen strings \"$PROJECT_DIR/WeatherApp/App/Resources/Base.lproj/Localizable.strings\" --output \"$PROJECT_DIR/WeatherApp/App/Resources/Strings.swift\" -t swift3\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi";
 		};
 		F9D68915C53267B5BA6F43E9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -694,6 +697,7 @@
 				66EFB6771EF6645F0099BF52 /* FontsManager.swift in Sources */,
 				66B9F1151EB4F6DC00526E2E /* UITableView+Extensions.swift in Sources */,
 				66EFB67B1EF664A40099BF52 /* FontType.swift in Sources */,
+				66EFB6821EF840D20099BF52 /* Strings.swift in Sources */,
 				66B9F0F51EB4E4BD00526E2E /* AppearanceManager.swift in Sources */,
 				66B9F0F11EB4E33A00526E2E /* Fonts+Views.swift in Sources */,
 				66BC02481EF30DD900067061 /* Dispatch+Current.swift in Sources */,
@@ -724,6 +728,7 @@
 				663216BC1EE71C7400E17CBD /* ru */,
 			);
 			name = Localizable.strings;
+			path = .;
 			sourceTree = "<group>";
 		};
 		66B9F0B81EB4DC6000526E2E /* Main.storyboard */ = {
@@ -732,6 +737,7 @@
 				66B9F0B91EB4DC6000526E2E /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		66B9F0BD1EB4DC6000526E2E /* LaunchScreen.storyboard */ = {
@@ -740,6 +746,7 @@
 				66B9F0BE1EB4DC6000526E2E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -852,7 +859,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = WeatherApp/Info.plist;
+				INFOPLIST_FILE = WeatherApp/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
@@ -873,7 +880,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = WeatherApp/Info.plist;
+				INFOPLIST_FILE = WeatherApp/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
