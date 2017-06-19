@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NetworkActivityIndicatorManager.shared.startDelay = 0
         NetworkActivityIndicatorManager.shared.completionDelay = 0
         
-        GMSPlacesClient.provideAPIKey("AIzaSyDmc393qtAwFYW_zKy7JkBMrZcyOnkaCpI")
+        GMSPlacesClient.provideAPIKey(URLs.googlePlacesKey)
         AppearanceManager.shared.configurateAll()
         AppearanceManager.shared.configureLocalizedAppearance()
         
