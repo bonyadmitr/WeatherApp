@@ -43,7 +43,7 @@
 	```
 
 
-## To get certificates
+<!--## To get certificates
 
 Enter project folder in terminal and run
 
@@ -51,7 +51,7 @@ Enter project folder in terminal and run
 bundle e fastlane updateAllProfiles
 ```
 
-Full infomation at [AppManager](https://gitlab.smedialink.com/iOS/AppManager)
+Full infomation at [AppManager](https://gitlab.smedialink.com/iOS/AppManager)-->
 
 ## To synchronize folders and groups in project for development
 
@@ -61,7 +61,7 @@ bundle e synx --no-sort-by-name WeatherApp.xcodeproj
 
 ## To do
 
-- [ ] Add Carthage for most Cocoapods dependencies
-- [ ] Add Carthage optimization with [CarthageCache](https://github.com/guidomb/carthage_cache) or something else
+- [x] Add Carthage for most Cocoapods dependencies
+- [x] Add Carthage optimization
 - [ ] Synchronize Cocoapods and Carthage with one script install
 - [ ] add CHANGELOG.md

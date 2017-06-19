@@ -11,6 +11,8 @@ import Foundation
 struct URLs {
     private init() {}
     
+    static let googlePlacesKey = "AIzaSyDmc393qtAwFYW_zKy7JkBMrZcyOnkaCpI"
+    
     //static let googleGeocodingKey = "AIzaSyBOM9Vwyela3f0LbbNx1OLePWbRgXXyV5M"
     static let googleKey = "AIzaSyDJiE9mf0s6w2Dc7oplXwUVuMJkQcEgBL4"
     static let googleApi = try! "https://maps.googleapis.com/maps/api/place/autocomplete/json".asURL()
