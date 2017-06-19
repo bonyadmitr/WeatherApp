@@ -41,6 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NetworkActivityIndicatorManager.shared.completionDelay = 0
         
         GMSPlacesClient.provideAPIKey(URLs.googlePlacesKey)
+        FabricManager.shared.startCrashlytics()
+        
         AppearanceManager.shared.configurateAll()
         AppearanceManager.shared.configureLocalizedAppearance()
         
@@ -55,6 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIView.transition(with: window, duration: 0.5, options: .transitionFlipFromLeft, animations: {}, completion: nil)
     }
     
+
     func applicationWillResignActive(_ application: UIApplication) {
     }
     func applicationDidEnterBackground(_ application: UIApplication) {

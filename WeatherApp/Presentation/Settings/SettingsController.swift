@@ -24,14 +24,6 @@ final class SettingsController: UIViewController {
         FontPickerManager.shared.delegates.add(self)
     }
     
-    @IBAction func actionSomeButton(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction func actionSomeButton2(_ sender: UIButton) {
-        
-    }
-    
     private func setupSearchController() {
         placesController.delegate = self
         
@@ -47,6 +39,7 @@ final class SettingsController: UIViewController {
             guard let navVC = segue.destination as? UINavigationController,
                 let vc = navVC.topViewController as? FontsController else { return }
             vc.delegate = self
+            FabricManager.shared.customMethod()
         } else if segue.identifier == "colors" {
             guard let vc = segue.destination as? ColorsController else { return }
             vc.delegate = self

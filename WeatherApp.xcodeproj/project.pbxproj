@@ -15,6 +15,7 @@
 		663216B51EE71AC800E17CBD /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663216B41EE71AC800E17CBD /* SearchController.swift */; };
 		663216B91EE71C7200E17CBD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 663216BB1EE71C7200E17CBD /* Localizable.strings */; };
 		663216BE1EE7C28000E17CBD /* NSAttributedString+GooglePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663216BD1EE7C28000E17CBD /* NSAttributedString+GooglePlace.swift */; };
+		6659941C1EF8661E001DE476 /* FabricManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6659941B1EF8661E001DE476 /* FabricManager.swift */; };
 		6684F0961EF2501B004B3342 /* FontsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F0951EF2501B004B3342 /* FontsController.swift */; };
 		6684F0981EF250E2004B3342 /* Array+Execute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F0971EF250E2004B3342 /* Array+Execute.swift */; };
 		6684F09A1EF27EB8004B3342 /* UIView+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F0991EF27EB8004B3342 /* UIView+Fonts.swift */; };
@@ -87,7 +88,7 @@
 		66EFB6771EF6645F0099BF52 /* FontsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFB6761EF6645F0099BF52 /* FontsManager.swift */; };
 		66EFB6791EF6647A0099BF52 /* FontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFB6781EF6647A0099BF52 /* FontFamily.swift */; };
 		66EFB67B1EF664A40099BF52 /* FontType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFB67A1EF664A40099BF52 /* FontType.swift */; };
-		66EFB67E1EF824CA0099BF52 /* Array+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFB67D1EF824CA0099BF52 /* Array+Empty.swift */; };
+		66EFB67E1EF824CA0099BF52 /* Emptyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFB67D1EF824CA0099BF52 /* Emptyable.swift */; };
 		66EFB6821EF840D20099BF52 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFB6811EF840D20099BF52 /* Strings.swift */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		663216BA1EE71C7200E17CBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		663216BC1EE71C7400E17CBD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		663216BD1EE7C28000E17CBD /* NSAttributedString+GooglePlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+GooglePlace.swift"; sourceTree = "<group>"; };
+		6659941B1EF8661E001DE476 /* FabricManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FabricManager.swift; sourceTree = "<group>"; };
 		6684F0951EF2501B004B3342 /* FontsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsController.swift; sourceTree = "<group>"; };
 		6684F0971EF250E2004B3342 /* Array+Execute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Execute.swift"; sourceTree = "<group>"; };
 		6684F0991EF27EB8004B3342 /* UIView+Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Fonts.swift"; sourceTree = "<group>"; };
@@ -130,14 +132,14 @@
 		66B9F0D81EB4E10D00526E2E /* KeyboardHideManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeyboardHideManager.framework; path = Carthage/Build/iOS/KeyboardHideManager.framework; sourceTree = "<group>"; };
 		66B9F0D91EB4E10D00526E2E /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		66B9F0DA1EB4E10D00526E2E /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
-		66B9F0E01EB4E1C400526E2E /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = Colors.swift; sourceTree = "<group>"; };
+		66B9F0E01EB4E1C400526E2E /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		66B9F0E11EB4E1C400526E2E /* Colors+Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Colors+Views.swift"; sourceTree = "<group>"; };
-		66B9F0E51EB4E20200526E2E /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fonts.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		66B9F0E51EB4E20200526E2E /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		66B9F0E61EB4E20200526E2E /* Fonts+AdvancedViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fonts+AdvancedViews.swift"; sourceTree = "<group>"; };
 		66B9F0EB1EB4E27C00526E2E /* BackgroundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundController.swift; sourceTree = "<group>"; };
-		66B9F0EC1EB4E27C00526E2E /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Images.swift; path = Images.swift; sourceTree = "<group>"; };
+		66B9F0EC1EB4E27C00526E2E /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		66B9F0F01EB4E33A00526E2E /* Fonts+Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fonts+Views.swift"; sourceTree = "<group>"; };
-		66B9F0F21EB4E33F00526E2E /* AssociationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssociationManager.swift; path = AssociationManager.swift; sourceTree = "<group>"; };
+		66B9F0F21EB4E33F00526E2E /* AssociationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssociationManager.swift; sourceTree = "<group>"; };
 		66B9F0F41EB4E4BD00526E2E /* AppearanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
 		66B9F0F61EB4E5A400526E2E /* UISearchBar+Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Properties.swift"; sourceTree = "<group>"; };
 		66B9F0F71EB4E5A400526E2E /* UITextField+Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Properties.swift"; sourceTree = "<group>"; };
@@ -156,9 +158,9 @@
 		66B9F1121EB4F6DC00526E2E /* URL+Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Path.swift"; sourceTree = "<group>"; };
 		66B9F1181EB4F6EF00526E2E /* Alamofire+PromisableMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+PromisableMapping.swift"; sourceTree = "<group>"; };
 		66B9F11A1EB4F8D300526E2E /* BackendError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendError.swift; sourceTree = "<group>"; };
-		66B9F11C1EB4F8F400526E2E /* URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLs.swift; path = URLs.swift; sourceTree = "<group>"; };
+		66B9F11C1EB4F8F400526E2E /* URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		66B9F11E1EB5238D00526E2E /* Promise+Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Promise+Init.swift"; sourceTree = "<group>"; };
-		66B9F1201EB523CE00526E2E /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Errors.swift; sourceTree = "<group>"; };
+		66B9F1201EB523CE00526E2E /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		66BC02401EF2F0CC00067061 /* ColorsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsController.swift; sourceTree = "<group>"; };
 		66BC02421EF2F53700067061 /* UserDefaults+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Color.swift"; sourceTree = "<group>"; };
 		66BC02451EF3093900067061 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -175,7 +177,7 @@
 		66EFB6761EF6645F0099BF52 /* FontsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsManager.swift; sourceTree = "<group>"; };
 		66EFB6781EF6647A0099BF52 /* FontFamily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontFamily.swift; sourceTree = "<group>"; };
 		66EFB67A1EF664A40099BF52 /* FontType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontType.swift; sourceTree = "<group>"; };
-		66EFB67D1EF824CA0099BF52 /* Array+Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Empty.swift"; sourceTree = "<group>"; };
+		66EFB67D1EF824CA0099BF52 /* Emptyable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emptyable.swift; sourceTree = "<group>"; };
 		66EFB6811EF840D20099BF52 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		7270620A0E46517B4E8F85C1 /* Pods-WeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.release.xcconfig"; sourceTree = "<group>"; };
 		965062DA02ADB5830B54EB51 /* Pods_WeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,6 +291,7 @@
 				66B9F0C91EB4E05400526E2E /* KeyboardLayoutConstraint.swift */,
 				66B9F0CA1EB4E05400526E2E /* NoDelayScrollView.swift */,
 				6629CCE31EF294AC00993446 /* MulticastDelegate.swift */,
+				6659941B1EF8661E001DE476 /* FabricManager.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -313,7 +316,7 @@
 				66B9F1101EB4F6DC00526E2E /* UITableView+Extensions.swift */,
 				66B9F1111EB4F6DC00526E2E /* UIViewController+Child.swift */,
 				66B9F1121EB4F6DC00526E2E /* URL+Path.swift */,
-				66EFB67D1EF824CA0099BF52 /* Array+Empty.swift */,
+				66EFB67D1EF824CA0099BF52 /* Emptyable.swift */,
 				66B9F1181EB4F6EF00526E2E /* Alamofire+PromisableMapping.swift */,
 				66957F191EE163C7007B5D21 /* Radians+Extensions.swift */,
 			);
@@ -417,7 +420,6 @@
 				66BC024C1EF3BFC700067061 /* Watchdog.swift */,
 				66BC02501EF3E21800067061 /* NetworkActivityLogger.swift */,
 			);
-			name = Logger;
 			path = Logger;
 			sourceTree = "<group>";
 		};
@@ -476,6 +478,7 @@
 				66B9F0C81EB4DEC300526E2E /* Carthage copy */,
 				1134C469E6D2EE607DC009EB /* [CP] Embed Pods Frameworks */,
 				F9D68915C53267B5BA6F43E9 /* [CP] Copy Pods Resources */,
+				6659941A1EF863EB001DE476 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -566,6 +569,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		6659941A1EF863EB001DE476 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" a5d85d058a83a56ab8902af20d910351fd97fc9f 049df64e3d3a6bf913f7600786d68b6d277aa85207a46610e00732276bb3f2a7";
 		};
 		66B9F0C81EB4DEC300526E2E /* Carthage copy */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -668,7 +684,7 @@
 				66B9F0EE1EB4E27C00526E2E /* Images.swift in Sources */,
 				66E7DB4A1EE4176500619C71 /* SettingsController.swift in Sources */,
 				66B9F1211EB523CE00526E2E /* Errors.swift in Sources */,
-				66EFB67E1EF824CA0099BF52 /* Array+Empty.swift in Sources */,
+				66EFB67E1EF824CA0099BF52 /* Emptyable.swift in Sources */,
 				66BC02411EF2F0CC00067061 /* ColorsController.swift in Sources */,
 				6629CCE61EF2983100993446 /* FontPickerManager.swift in Sources */,
 				66B9F0D11EB4E05400526E2E /* UIResponder+Set.swift in Sources */,
@@ -693,6 +709,7 @@
 				66EFB6821EF840D20099BF52 /* Strings.swift in Sources */,
 				66B9F0F51EB4E4BD00526E2E /* AppearanceManager.swift in Sources */,
 				66B9F0F11EB4E33A00526E2E /* Fonts+Views.swift in Sources */,
+				6659941C1EF8661E001DE476 /* FabricManager.swift in Sources */,
 				66BC02481EF30DD900067061 /* Dispatch+Current.swift in Sources */,
 				66957F1E1EE1764B007B5D21 /* Strongify.swift in Sources */,
 				66B9F1141EB4F6DC00526E2E /* UIStoryboard+Controller.swift in Sources */,
@@ -847,6 +864,7 @@
 			baseConfigurationReference = 159978EE96E9001D5107BDD1 /* Pods-WeatherApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 227NMT55ZD;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
