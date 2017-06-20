@@ -59,6 +59,11 @@ final class FontsController: UIViewController {
     fileprivate func fontName(for indexPath: IndexPath) -> String {
         return fontFamilies[indexPath.section].fonts[indexPath.row]
     }
+    
+    /// To solve from console: Attempting to load the view of a view controller while it is deallocating...
+    deinit {
+        self.searchController.view.removeFromSuperview()
+    }
 }
 
 extension FontsController: UITableViewDataSource {
@@ -108,7 +113,9 @@ extension FontsController: UITableViewDataSource {
 extension FontsController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         searchController.isActive = false
-        delegate?.didSelect(fontName: fontName(for: indexPath))
+        let fName = fontName(for: indexPath)
+        FabricManager.shared.log(fontName: fName)
+        delegate?.didSelect(fontName: fName)
         dismiss(animated: true, completion: nil)
     }
 }

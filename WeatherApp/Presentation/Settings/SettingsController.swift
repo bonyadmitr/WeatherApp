@@ -39,13 +39,13 @@ final class SettingsController: UIViewController {
             guard let navVC = segue.destination as? UINavigationController,
                 let vc = navVC.topViewController as? FontsController else { return }
             vc.delegate = self
-            FabricManager.shared.customMethod()
         } else if segue.identifier == "colors" {
             guard let vc = segue.destination as? ColorsController else { return }
             vc.delegate = self
         }
     }
     
+    /// To solve from console: Attempting to load the view of a view controller while it is deallocating...
     deinit {
         self.searchController.view.removeFromSuperview()
     }
@@ -59,9 +59,9 @@ extension SettingsController: UISearchResultsUpdating {
     }
 }
 extension SettingsController: PlacesControllerDelegate {
-    func didSelect(place: NSAttributedString) {
+    func didSelect(place: String) {
         searchController.isActive = false
-        UserDefaultsManager.shared.cityName = place.string
+        UserDefaultsManager.shared.cityName = place
     }
 }
 extension SettingsController: FontsControllerDelegate {

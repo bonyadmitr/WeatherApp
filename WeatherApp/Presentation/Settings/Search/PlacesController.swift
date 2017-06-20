@@ -11,7 +11,7 @@ import MapKit
 
 // MARK: PlacesControllerDelegate
 protocol PlacesControllerDelegate: class {
-    func didSelect(place: NSAttributedString)
+    func didSelect(place: String)
 }
 
 // MARK: - PlacesController
@@ -58,6 +58,8 @@ extension PlacesController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.didSelect(place: places[indexPath.row])
+        let place = places[indexPath.row].string
+        FabricManager.shared.log(cityName: place)
+        delegate?.didSelect(place: place)
     }
 }
