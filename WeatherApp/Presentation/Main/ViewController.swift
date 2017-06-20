@@ -36,6 +36,11 @@ final class ViewController: BackgroundController {
         updateCityIfNeeded()
     }
     
+    @IBAction func actionSettingsButton(_ sender: UIButton) {
+        FabricManager.shared.logSettings()
+        performSegue(withIdentifier: "settings", sender: nil)
+    }
+    
     private func updateCityIfNeeded() {
         let cityName = UserDefaultsManager.shared.cityName
         if text == cityName { return }
