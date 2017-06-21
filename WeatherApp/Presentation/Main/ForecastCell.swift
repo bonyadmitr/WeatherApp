@@ -35,6 +35,8 @@ class ForecastCell: UITableViewCell {
         layer.shadowRadius = 2
         layer.shadowOpacity = 1
         layer.shadowOffset = CGSize(width: 2, height: 2)
+        
+        formatter.locale = LocalizationManager.shared.locale
     }
     
     func fill(with object: WeatherForecast) {

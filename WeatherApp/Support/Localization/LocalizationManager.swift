@@ -14,7 +14,7 @@ import UIKit
 /// for it used: http://www.developersite.org/102-26935-ios
 
 /// can be added notification for NotificationCenter when language changed
-class LocalizationManager {
+final class LocalizationManager {
     
     /// singleton
     static let shared = LocalizationManager()
@@ -148,6 +148,11 @@ class LocalizationManager {
             let bundle = Bundle(path: path)
             else { return }
         objc_setAssociatedObject(Bundle.main, &kBundleKey, bundle, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+    }
+}
+extension LocalizationManager {
+    public var locale: Locale {
+        return Locale(identifier: currentLanguage)
     }
 }
 
