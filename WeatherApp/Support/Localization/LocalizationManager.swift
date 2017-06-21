@@ -14,7 +14,7 @@ import UIKit
 /// for it used: http://www.developersite.org/102-26935-ios
 
 /// can be added notification for NotificationCenter when language changed
-class LocalizationManager {
+final class LocalizationManager {
     
     /// singleton
     static let shared = LocalizationManager()
@@ -38,7 +38,7 @@ class LocalizationManager {
     /// development language. default is English. setup if it defferent
     public var devLanguage = "en"
     
-    /// array of available languages
+    /// array of available languages ("en", "ru")
     public var availableLanguages: [String] {
         var availableLanguages = Bundle.main.localizations
         if let indexOfBase = availableLanguages.index(of: "Base") {
@@ -82,6 +82,11 @@ class LocalizationManager {
         return nil
     }
     
+    /// full names
+    public var displayLanguages: [String] {
+        return availableLanguages.flatMap { displayName(for: $0) }
+    }
+    
     /// check for rightToLeft language
     public var isCurrentLanguageRTL: Bool {
         return Locale.characterDirection(forLanguage: currentLanguage) == .rightToLeft
@@ -97,7 +102,7 @@ class LocalizationManager {
     }
     
     /// can be used for any NSLocalizedString method
-    public func set(language: String, complitionHandler: (() -> Void)?) {
+    public func set(language: String, complitionHandler: (() -> Void)? = nil) {
         appleLanguage = language
         currentLanguage = language
         
@@ -143,6 +148,11 @@ class LocalizationManager {
             let bundle = Bundle(path: path)
             else { return }
         objc_setAssociatedObject(Bundle.main, &kBundleKey, bundle, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+    }
+}
+extension LocalizationManager {
+    public var locale: Locale {
+        return Locale(identifier: currentLanguage)
     }
 }
 

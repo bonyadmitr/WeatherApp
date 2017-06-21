@@ -1,7 +1,18 @@
-/* 
-  Localizable.strings
-  WeatherApp
+"weather_app"="Погода";
+"cancel"="Отмена";
+"new_city"="Выбрать другой город";
+"settings"="Настройки";
+"not_found"="Не найдено";
+"fonts"="Шрифты";
+"default"="Стандартный";
+"colors"="Цвета";
+"search"="Поиск";
 
-  Created by Bondar Yaroslav on 06/06/2017.
-  Copyright © 2017 Bondar Yaroslav. All rights reserved.
-*/
+"all"="Все";
+"regular"="Обычные";
+"light"="Тонкие";
+"bold"="Толстые";
+
+"select_font"="Выбор шрифта";
+"select_color"="Выбор цвета";
+"select_language"="Выбор языка";

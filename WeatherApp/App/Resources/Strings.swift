@@ -27,8 +27,18 @@ enum L10n {
   case notFound
   /// Regular
   case regular
+  /// Search
+  case search
+  /// Select color
+  case selectColor
+  /// Select font
+  case selectFont
+  /// Select language
+  case selectLanguage
   /// Settings
   case settings
+  /// Weather App
+  case weatherApp
 }
 // swiftlint:enable type_body_length
 
@@ -57,8 +67,18 @@ extension L10n: CustomStringConvertible {
         return L10n.tr(key: "not_found")
       case .regular:
         return L10n.tr(key: "regular")
+      case .search:
+        return L10n.tr(key: "search")
+      case .selectColor:
+        return L10n.tr(key: "select_color")
+      case .selectFont:
+        return L10n.tr(key: "select_font")
+      case .selectLanguage:
+        return L10n.tr(key: "select_language")
       case .settings:
         return L10n.tr(key: "settings")
+      case .weatherApp:
+        return L10n.tr(key: "weather_app")
     }
   }
 

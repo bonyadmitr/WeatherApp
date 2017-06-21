@@ -26,6 +26,7 @@ struct AppearanceManager {
         /// or any other appearance()
 //        UIApplication.shared.delegate?.window??.tintColor = Colors.main
 
+        removeAllBackButtonTitles()
         configureNavigationBar()
         configureBarButtonItem()
         configureSearchBar()
@@ -37,6 +38,17 @@ struct AppearanceManager {
     func configureLocalizedAppearance() {
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).lzTitle = "cancel"
     }
+    
+    /// remove all back button titles
+    /// https://stackoverflow.com/questions/29912489/how-to-remove-all-navigationbar-back-button-title
+    func removeAllBackButtonTitles() {
+        let offset = UIOffset(horizontal: 0, vertical: -60)
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(offset, for:.default)
+    }
+    
+//    func configureNavigationItem() {
+//        
+//    }
     
     /// Need to customize and use instead of subclasses
     func configureNavigationBar() {
@@ -53,6 +65,7 @@ struct AppearanceManager {
         /// back button
         //        UINavigationBar.appearance().backIndicatorImage
         //        UINavigationBar.appearance().backIndicatorTransitionMaskImage
+
         
         ///
         UINavigationBar.appearance().isTranslucent = false

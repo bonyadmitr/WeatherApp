@@ -29,7 +29,9 @@ extension ColorsController: UICollectionViewDataSource {
 }
 extension ColorsController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.didSelect(color: colors[indexPath.row])
+        let color = colors[indexPath.row]
+        FabricManager.shared.log(color: color)
+        delegate?.didSelect(color: color)
         dismiss(animated: true, completion: nil)
     }
 }

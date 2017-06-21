@@ -36,9 +36,11 @@ final class FontsController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        searchController.delegate = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
+        searchController.searchBar.lzPlaceholder = tr(.search)
         searchController.searchBar.scopeButtonTitles = [FontType.all.name,
                                                         FontType.regular.name,
                                                         FontType.light.name,
@@ -58,6 +60,11 @@ final class FontsController: UIViewController {
     fileprivate func fontName(for indexPath: IndexPath) -> String {
         return fontFamilies[indexPath.section].fonts[indexPath.row]
     }
+    
+    /// To solve from console: Attempting to load the view of a view controller while it is deallocating...
+    deinit {
+        self.searchController.view.removeFromSuperview()
+    }
 }
 
 extension FontsController: UITableViewDataSource {
@@ -68,7 +75,7 @@ extension FontsController: UITableViewDataSource {
             return fontFamilies.count
         }
         let noDataLabel = UILabel()
-        noDataLabel.lzText = "not_found"
+        noDataLabel.lzText = tr(.notFound)
         noDataLabel.textAlignment = .center
         tableView.backgroundView = noDataLabel
         return 0
@@ -87,15 +94,6 @@ extension FontsController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return fontFamilies[section].name
     }
-}
-
-// MARK: - UITableViewDelegate
-extension FontsController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        searchController.isActive = false
-        delegate?.didSelect(fontName: fontName(for: indexPath))
-        dismiss(animated: true, completion: nil)
-    }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         var indexes = fontFamilies.map { ($0.name as NSString).substring(to: 1) }
@@ -109,6 +107,17 @@ extension FontsController: UITableViewDelegate {
             tableView.contentOffset = .zero
         }
         return index - 1
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension FontsController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        searchController.isActive = false
+        let fName = fontName(for: indexPath)
+        FabricManager.shared.log(fontName: fName)
+        delegate?.didSelect(fontName: fName)
+        dismiss(animated: true, completion: nil)
     }
 }
 
@@ -141,5 +150,12 @@ extension FontsController: UISearchBarDelegate {
             fontFamilies = fontFamiliesAll.filter { $0.name.contains(searchText) }
         }
         tableView.reloadData()
+    }
+}
+
+// MARK: - UISearchControllerDelegate
+extension FontsController: UISearchControllerDelegate {
+    func willDismissSearchController(_ searchController: UISearchController) {
+        FabricManager.shared.log(searchText: searchController.searchBar.text)
     }
 }

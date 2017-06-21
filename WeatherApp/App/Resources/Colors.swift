@@ -8,8 +8,7 @@
 
 import UIKit
 
-struct Colors {
-    private init() {}
+enum Colors {
     static var mainDefault = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
     static var text = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     static var imageDark = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)

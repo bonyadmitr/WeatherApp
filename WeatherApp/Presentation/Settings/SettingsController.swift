@@ -24,14 +24,6 @@ final class SettingsController: UIViewController {
         FontPickerManager.shared.delegates.add(self)
     }
     
-    @IBAction func actionSomeButton(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction func actionSomeButton2(_ sender: UIButton) {
-        
-    }
-    
     private func setupSearchController() {
         placesController.delegate = self
         
@@ -53,6 +45,7 @@ final class SettingsController: UIViewController {
         }
     }
     
+    /// To solve from console: Attempting to load the view of a view controller while it is deallocating...
     deinit {
         self.searchController.view.removeFromSuperview()
     }
@@ -66,9 +59,9 @@ extension SettingsController: UISearchResultsUpdating {
     }
 }
 extension SettingsController: PlacesControllerDelegate {
-    func didSelect(place: NSAttributedString) {
+    func didSelect(place: String) {
         searchController.isActive = false
-        UserDefaultsManager.shared.cityName = place.string
+        UserDefaultsManager.shared.cityName = place
     }
 }
 extension SettingsController: FontsControllerDelegate {

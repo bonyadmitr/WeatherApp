@@ -4,6 +4,11 @@ use_frameworks!
 
 target 'WeatherApp' do
 
+  ## Analytics
+  pod 'Fabric'
+  pod 'Crashlytics'
+
+  # Google
   pod 'GooglePlaces'
 
   ## Code generator

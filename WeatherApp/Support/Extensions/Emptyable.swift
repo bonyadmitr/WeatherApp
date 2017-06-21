@@ -1,5 +1,5 @@
 //
-//  Array+Empty.swift
+//  Emptyable.swift
 //  WeatherApp
 //
 //  Created by Bondar Yaroslav on 19/06/2017.
@@ -8,8 +8,15 @@
 
 import Foundation
 
-extension Array {
+protocol Emptyable {
+    var isEmpty: Bool { get }
+    var notEmpty: Bool { get }
+}
+extension Emptyable {
     var notEmpty: Bool {
         return !isEmpty
     }
 }
+
+extension Array: Emptyable {}
+extension String: Emptyable {}
