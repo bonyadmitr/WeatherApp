@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -155,14 +155,14 @@
                     <navigationItem key="navigationItem" id="98t-cT-Kcd">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="pVD-Bw-JDz">
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="Settings"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="settings"/>
                             </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="actionSettingsButton:" destination="BYZ-38-t0r" id="4cP-kF-BOW"/>
                             </connections>
                         </barButtonItem>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="WeatherApp"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="weather_app"/>
                         </userDefinedRuntimeAttributes>
                     </navigationItem>
                     <connections>
@@ -177,7 +177,7 @@
         <!--Navigation Controller-->
         <scene sceneID="huj-Qg-l4a">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qYE-f5-shg" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="startVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qYE-f5-shg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="gi0-6J-lcc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

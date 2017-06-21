@@ -24,10 +24,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XP1-MB-XR5">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="172"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="304"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VQh-SY-CkY">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="172"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="304"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdD-tw-ekC">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -36,32 +36,50 @@
                                                             <constraint firstAttribute="height" constant="44" id="hh5-Jd-b5p"/>
                                                         </constraints>
                                                     </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyA-JL-5MX">
+                                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="44" id="34h-Uh-N79"/>
+                                                        </constraints>
+                                                        <state key="normal" title="font"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontType" value="base"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="select_font"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="RpU-8X-Fnx" kind="presentation" identifier="fonts" id="r6a-Cw-rLH"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Pd-Oe-XNU">
+                                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="44" id="l9U-rd-18t"/>
+                                                        </constraints>
+                                                        <state key="normal" title="color"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontType" value="base"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="select_color"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="3Cl-8l-l6E" kind="presentation" identifier="colors" id="KW5-Yi-ZqW"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecW-yh-Mjs">
+                                                        <rect key="frame" x="0.0" y="132" width="320" height="44"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="44" id="uFM-5o-5sX"/>
+                                                        </constraints>
+                                                        <state key="normal" title="language"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontType" value="base"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="select_language"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="ZXM-Eh-7Lj" kind="presentation" id="h8s-bj-YVQ"/>
+                                                        </connections>
+                                                    </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbm-md-coo">
-                                                        <rect key="frame" x="0.0" y="44" width="320" height="128"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyA-JL-5MX">
-                                                                <rect key="frame" x="8" y="8" width="296" height="44"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <state key="normal" title="Font select"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontType" value="base"/>
-                                                                </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <segue destination="RpU-8X-Fnx" kind="presentation" identifier="fonts" id="r6a-Cw-rLH"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Pd-Oe-XNU">
-                                                                <rect key="frame" x="8" y="51" width="296" height="44"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <state key="normal" title="Color select"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontType" value="base"/>
-                                                                </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <segue destination="3Cl-8l-l6E" kind="presentation" identifier="colors" id="KW5-Yi-ZqW"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
+                                                        <rect key="frame" x="0.0" y="176" width="320" height="128"/>
                                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="128" id="rhm-qK-nIC"/>
@@ -192,7 +210,7 @@
         <!--Colors Controller-->
         <scene sceneID="b1f-bl-nWf">
             <objects>
-                <viewController id="3Cl-8l-l6E" customClass="ColorsController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="3Cl-8l-l6E" customClass="ColorsController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iVx-i2-WfP"/>
                         <viewControllerLayoutGuide type="bottom" id="Juj-3q-l9s"/>
@@ -300,6 +318,101 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZs-a8-0xz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2653" y="-303"/>
+        </scene>
+        <!--Language Controller-->
+        <scene sceneID="agu-2B-RuM">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ZXM-Eh-7Lj" customClass="LanguageController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Grw-7F-fuv"/>
+                        <viewControllerLayoutGuide type="bottom" id="3H5-c5-ZZJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SVE-0g-66M">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0kP-JN-yAS" userLabel="Title View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1GB-0r-Flv">
+                                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                        <items>
+                                            <navigationItem title="Title" id="ROl-gG-0fx">
+                                                <barButtonItem key="rightBarButtonItem" title="Item" id="n53-8T-ZvK">
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="cancel"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="dismissSelf:" destination="rL5-bj-mfk" id="lDi-ez-fCZ"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="select_language"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="1GB-0r-Flv" secondAttribute="bottom" id="5cd-0d-V4A"/>
+                                    <constraint firstItem="1GB-0r-Flv" firstAttribute="leading" secondItem="0kP-JN-yAS" secondAttribute="leading" id="BwO-G5-I7W"/>
+                                    <constraint firstAttribute="trailing" secondItem="1GB-0r-Flv" secondAttribute="trailing" id="OQP-Wb-m1M"/>
+                                    <constraint firstAttribute="height" constant="64" id="TOh-EC-rMt"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="czBackColor" value="main"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yR9-ZN-I2z">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LanguageCell" textLabel="4bC-Qt-e8A" style="IBUITableViewCellStyleDefault" id="3nh-Dg-suq" customClass="LanguageCell" customModule="WeatherApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3nh-Dg-suq" id="faf-LY-qAE">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4bC-Qt-e8A">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="fontType" value="base"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZXM-Eh-7Lj" id="6v9-hE-zdZ"/>
+                                    <outlet property="delegate" destination="ZXM-Eh-7Lj" id="Faf-yY-jJT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0kP-JN-yAS" firstAttribute="top" secondItem="SVE-0g-66M" secondAttribute="top" id="4Id-cX-Vms"/>
+                            <constraint firstAttribute="trailing" secondItem="yR9-ZN-I2z" secondAttribute="trailing" id="PjV-ta-y4h"/>
+                            <constraint firstItem="yR9-ZN-I2z" firstAttribute="leading" secondItem="SVE-0g-66M" secondAttribute="leading" id="Ud0-G7-VzQ"/>
+                            <constraint firstItem="3H5-c5-ZZJ" firstAttribute="top" secondItem="yR9-ZN-I2z" secondAttribute="bottom" id="ck2-x7-LuV"/>
+                            <constraint firstItem="yR9-ZN-I2z" firstAttribute="top" secondItem="0kP-JN-yAS" secondAttribute="bottom" id="csm-FT-kdB"/>
+                            <constraint firstAttribute="trailing" secondItem="0kP-JN-yAS" secondAttribute="trailing" id="fie-LJ-2H9"/>
+                            <constraint firstItem="0kP-JN-yAS" firstAttribute="leading" secondItem="SVE-0g-66M" secondAttribute="leading" id="iF0-ZP-tFa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="yR9-ZN-I2z" id="mR0-Hx-tqj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rL5-bj-mfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2649.375" y="1050"/>
         </scene>
     </scenes>
 </document>

@@ -17,6 +17,8 @@
 		663216BE1EE7C28000E17CBD /* NSAttributedString+GooglePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663216BD1EE7C28000E17CBD /* NSAttributedString+GooglePlace.swift */; };
 		6659941C1EF8661E001DE476 /* FabricManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6659941B1EF8661E001DE476 /* FabricManager.swift */; };
 		6659941F1EF9407F001DE476 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6659941D1EF9407F001DE476 /* Settings.storyboard */; };
+		665994241EFA4D4E001DE476 /* LanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665994231EFA4D4E001DE476 /* LanguageController.swift */; };
+		665994261EFA4E3F001DE476 /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665994251EFA4E3F001DE476 /* LanguageCell.swift */; };
 		6684F0961EF2501B004B3342 /* FontsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F0951EF2501B004B3342 /* FontsController.swift */; };
 		6684F0981EF250E2004B3342 /* Array+Execute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F0971EF250E2004B3342 /* Array+Execute.swift */; };
 		6684F09A1EF27EB8004B3342 /* UIView+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F0991EF27EB8004B3342 /* UIView+Fonts.swift */; };
@@ -105,6 +107,8 @@
 		663216BD1EE7C28000E17CBD /* NSAttributedString+GooglePlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+GooglePlace.swift"; sourceTree = "<group>"; };
 		6659941B1EF8661E001DE476 /* FabricManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FabricManager.swift; path = ../Support/Classes/FabricManager.swift; sourceTree = "<group>"; };
 		6659941E1EF9407F001DE476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
+		665994231EFA4D4E001DE476 /* LanguageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageController.swift; sourceTree = "<group>"; };
+		665994251EFA4E3F001DE476 /* LanguageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
 		6684F0951EF2501B004B3342 /* FontsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsController.swift; sourceTree = "<group>"; };
 		6684F0971EF250E2004B3342 /* Array+Execute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Execute.swift"; sourceTree = "<group>"; };
 		6684F0991EF27EB8004B3342 /* UIView+Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Fonts.swift"; sourceTree = "<group>"; };
@@ -222,7 +226,7 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		6629CCE81EF29AE800993446 /* Fonts */ = {
+		6629CCE81EF29AE800993446 /* Fonts picker */ = {
 			isa = PBXGroup;
 			children = (
 				6684F0951EF2501B004B3342 /* FontsController.swift */,
@@ -232,7 +236,17 @@
 				66EFB6561EF47B7D0099BF52 /* FontCell.swift */,
 				6629CCE51EF2983100993446 /* FontPickerManager.swift */,
 			);
+			name = "Fonts picker";
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		665994271EFA4E61001DE476 /* Language select */ = {
+			isa = PBXGroup;
+			children = (
+				665994231EFA4D4E001DE476 /* LanguageController.swift */,
+				665994251EFA4E3F001DE476 /* LanguageCell.swift */,
+			);
+			name = "Language select";
 			sourceTree = "<group>";
 		};
 		66B9F0A81EB4DC6000526E2E = {
@@ -446,7 +460,8 @@
 				66E7DB491EE4176500619C71 /* SettingsController.swift */,
 				66BC02401EF2F0CC00067061 /* ColorsController.swift */,
 				6629CCE71EF29AD000993446 /* Search */,
-				6629CCE81EF29AE800993446 /* Fonts */,
+				665994271EFA4E61001DE476 /* Language select */,
+				6629CCE81EF29AE800993446 /* Fonts picker */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -720,6 +735,7 @@
 				66EFB6571EF47B7D0099BF52 /* FontCell.swift in Sources */,
 				66B9F0D01EB4E05400526E2E /* Promise+Catch.swift in Sources */,
 				66BC02461EF3093900067061 /* Logger.swift in Sources */,
+				665994261EFA4E3F001DE476 /* LanguageCell.swift in Sources */,
 				66B9F0ED1EB4E27C00526E2E /* BackgroundController.swift in Sources */,
 				66B9F1081EB4F31E00526E2E /* PhotosService.swift in Sources */,
 				66B91DDC1EB52F88002A49F3 /* Weather.swift in Sources */,
@@ -729,6 +745,7 @@
 				6629CCE41EF294AC00993446 /* MulticastDelegate.swift in Sources */,
 				66B9F0CE1EB4E05400526E2E /* KeyboardLayoutConstraint.swift in Sources */,
 				66E7DB481EE3F91300619C71 /* Kingfisher+Promise.swift in Sources */,
+				665994241EFA4D4E001DE476 /* LanguageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

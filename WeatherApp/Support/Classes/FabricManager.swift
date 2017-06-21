@@ -60,6 +60,10 @@ final class FabricManager: NSObject {
     func log(cityName: String) {
         Answers.logCustomEvent(withName: "selected city", customAttributes: ["city": cityName])
     }
+    
+    func log(language: String) {
+        Answers.logCustomEvent(withName: "selected language", customAttributes: ["language": language])
+    }
 }
 extension FabricManager: CrashlyticsDelegate {
     func crashlyticsDidDetectReport(forLastExecution report: CLSReport, completionHandler: @escaping (Bool) -> Void) {

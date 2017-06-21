@@ -1,3 +1,4 @@
+"weather_app"="Weather App";
 "cancel"="Cancel";
 "new_city"="Enter new city";
 "settings"="Settings";
@@ -5,9 +6,13 @@
 "fonts"="Fonts";
 "default"="Default";
 "colors"="Colors";
+"search"="Search";
 
 "all"="All";
 "regular"="Regular";
 "light"="Light";
 "bold"="Bold";
 
+"select_font"="Select font";
+"select_color"="Select color";
+"select_language"="Select language";
