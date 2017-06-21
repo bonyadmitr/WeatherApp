@@ -19,6 +19,7 @@
 		6659941F1EF9407F001DE476 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6659941D1EF9407F001DE476 /* Settings.storyboard */; };
 		665994241EFA4D4E001DE476 /* LanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665994231EFA4D4E001DE476 /* LanguageController.swift */; };
 		665994261EFA4E3F001DE476 /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665994251EFA4E3F001DE476 /* LanguageCell.swift */; };
+		665994291EFA910C001DE476 /* UserDefaults+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665994281EFA910C001DE476 /* UserDefaults+UIImage.swift */; };
 		6684F0961EF2501B004B3342 /* FontsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F0951EF2501B004B3342 /* FontsController.swift */; };
 		6684F0981EF250E2004B3342 /* Array+Execute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F0971EF250E2004B3342 /* Array+Execute.swift */; };
 		6684F09A1EF27EB8004B3342 /* UIView+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F0991EF27EB8004B3342 /* UIView+Fonts.swift */; };
@@ -109,6 +110,7 @@
 		6659941E1EF9407F001DE476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		665994231EFA4D4E001DE476 /* LanguageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageController.swift; sourceTree = "<group>"; };
 		665994251EFA4E3F001DE476 /* LanguageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
+		665994281EFA910C001DE476 /* UserDefaults+UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+UIImage.swift"; sourceTree = "<group>"; };
 		6684F0951EF2501B004B3342 /* FontsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsController.swift; sourceTree = "<group>"; };
 		6684F0971EF250E2004B3342 /* Array+Execute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Execute.swift"; sourceTree = "<group>"; };
 		6684F0991EF27EB8004B3342 /* UIView+Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Fonts.swift"; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 				66EFB67D1EF824CA0099BF52 /* Emptyable.swift */,
 				66B9F1181EB4F6EF00526E2E /* Alamofire+PromisableMapping.swift */,
 				66957F191EE163C7007B5D21 /* Radians+Extensions.swift */,
+				665994281EFA910C001DE476 /* UserDefaults+UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -690,6 +693,7 @@
 				66CFDE151EEB209A00A54C6B /* UIView+Layer.swift in Sources */,
 				66B91DE21EB5488A002A49F3 /* UIScrollView+Refresh.swift in Sources */,
 				66EFB6551EF4721C0099BF52 /* UserDefaultsManager.swift in Sources */,
+				665994291EFA910C001DE476 /* UserDefaults+UIImage.swift in Sources */,
 				66B9F1161EB4F6DC00526E2E /* UIViewController+Child.swift in Sources */,
 				66B9F1031EB4E6AB00526E2E /* String+LocalizationManager.swift in Sources */,
 				66B9F0F31EB4E33F00526E2E /* AssociationManager.swift in Sources */,

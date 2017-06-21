@@ -8,9 +8,7 @@
 
 import Foundation
 
-struct URLs {
-    private init() {}
-    
+enum URLs {
     static let googlePlacesKey = "AIzaSyDmc393qtAwFYW_zKy7JkBMrZcyOnkaCpI"
     
     //static let googleGeocodingKey = "AIzaSyBOM9Vwyela3f0LbbNx1OLePWbRgXXyV5M"
