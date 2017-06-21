@@ -8,11 +8,11 @@
 
 import UIKit
 
-fileprivate let colorError = "- there is no color type:"
+fileprivate let colorError = "there is no color type:"
 
 extension UIView {
     fileprivate func colorErrorMessage(for value: Any) -> String {
-        return  "\(colorError) \(value) in: \(self.classForCoder)"
+        return  "⚠️ \(colorError) \(value) in: \(self.classForCoder) ⚠️"
     }
     
     @available(*, unavailable, message: "This property is reserved for Interface Builder")

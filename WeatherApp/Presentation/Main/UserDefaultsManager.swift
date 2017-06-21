@@ -12,9 +12,19 @@ final class UserDefaultsManager {
     
     static let shared = UserDefaultsManager()
     
-    private let cityNameKey = "cityNameKey"
-    var cityName: String {
-        get { return UserDefaults.standard.string(forKey: cityNameKey) ?? "Moscow" }
-        set { UserDefaults.standard.set(newValue, forKey: cityNameKey) }
+    private let placeKey = "placeKey"
+    var place: Place {
+        get {
+            guard let data = UserDefaults.standard.object(forKey: placeKey) as? Data,
+                let place = NSKeyedUnarchiver.unarchiveObject(with: data) as? Place
+            else {
+                return Place(city: "Moscow", country: "Russia", full: NSAttributedString())
+            }
+            return place
+        }
+        set {
+            let data = NSKeyedArchiver.archivedData(withRootObject: newValue)
+            UserDefaults.standard.set(data, forKey: placeKey)
+        }
     }
 }

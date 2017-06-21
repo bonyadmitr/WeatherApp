@@ -11,13 +11,13 @@ import MapKit
 
 // MARK: PlacesControllerDelegate
 protocol PlacesControllerDelegate: class {
-    func didSelect(place: String)
+    func didSelect(place: Place)
 }
 
 // MARK: - PlacesController
 class PlacesController: UITableViewController {
     
-    var places: [NSAttributedString] = [] {
+    var places: [Place] = [] {
         didSet {
             tableView.reloadData()
         }
@@ -53,13 +53,13 @@ extension PlacesController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let place = places[indexPath.row]
-        cell.textLabel?.attributedText = place.boldGooglePlaceString
+        cell.textLabel?.attributedText = place.full.boldGooglePlaceString
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let place = places[indexPath.row].string
-        FabricManager.shared.log(cityName: place)
+        let place = places[indexPath.row]
+        FabricManager.shared.log(cityName: place.full.string)
         delegate?.didSelect(place: place)
     }
 }

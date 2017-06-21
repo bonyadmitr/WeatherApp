@@ -25,6 +25,8 @@ enum L10n {
   case newCity
   /// Not found
   case notFound
+  /// Pull to refresh
+  case pullRefresh
   /// Regular
   case regular
   /// Search
@@ -65,6 +67,8 @@ extension L10n: CustomStringConvertible {
         return L10n.tr(key: "new_city")
       case .notFound:
         return L10n.tr(key: "not_found")
+      case .pullRefresh:
+        return L10n.tr(key: "pull_refresh")
       case .regular:
         return L10n.tr(key: "regular")
       case .search:

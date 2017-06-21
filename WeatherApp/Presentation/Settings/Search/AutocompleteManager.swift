@@ -11,7 +11,7 @@ import MapKit
 
 public final class AutocompleteManager {
     
-    func startSearch(with searchText: String, completion: @escaping ([NSAttributedString]) -> Void) {
+    func startSearch(with searchText: String, completion: @escaping ([Place]) -> Void) {
         
         let filter = GMSAutocompleteFilter()
         filter.type = .city
@@ -20,7 +20,11 @@ public final class AutocompleteManager {
             guard let results = results else {
                 return completion([])
             }
-            completion(results.map { $0.attributedFullText })
+            
+            completion(results.map { Place(city: $0.attributedPrimaryText.string,
+                                           country: $0.attributedSecondaryText?.string ?? "",
+                                           full: $0.attributedFullText)
+            })
         }
     }
 }

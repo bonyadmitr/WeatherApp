@@ -9,11 +9,11 @@
 import UIKit
 
 
-fileprivate let fontErrorMessage = "- there is no font type:"
+fileprivate let fontErrorConstant = "there is no font type:"
 
 extension UIView {
     fileprivate func fontErrorMessage(for value: Any) -> String {
-        return  "\(fontErrorMessage) \(value) in: \(self.classForCoder)"
+        return  "⚠️ \(fontErrorConstant) \(value) in: \(self.classForCoder) ⚠️"
     }
 }
 

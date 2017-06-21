@@ -7,6 +7,7 @@
 "default"="Default";
 "colors"="Colors";
 "search"="Search";
+"pull_refresh"="Pull to refresh";
 
 "all"="All";
 "regular"="Regular";

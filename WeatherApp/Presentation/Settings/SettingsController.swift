@@ -59,9 +59,9 @@ extension SettingsController: UISearchResultsUpdating {
     }
 }
 extension SettingsController: PlacesControllerDelegate {
-    func didSelect(place: String) {
+    func didSelect(place: Place) {
         searchController.isActive = false
-        UserDefaultsManager.shared.cityName = place
+        UserDefaultsManager.shared.place = place
     }
 }
 extension SettingsController: FontsControllerDelegate {
