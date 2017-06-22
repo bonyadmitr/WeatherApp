@@ -21,6 +21,14 @@
 		665994261EFA4E3F001DE476 /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665994251EFA4E3F001DE476 /* LanguageCell.swift */; };
 		665994291EFA910C001DE476 /* UserDefaults+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665994281EFA910C001DE476 /* UserDefaults+UIImage.swift */; };
 		6659942B1EFAE802001DE476 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6659942A1EFAE802001DE476 /* Place.swift */; };
+		6659942D1EFB1B41001DE476 /* AppIconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6659942C1EFB1B41001DE476 /* AppIconManager.swift */; };
+		6659942F1EFB1B6A001DE476 /* UIApplication+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6659942E1EFB1B6A001DE476 /* UIApplication+Icon.swift */; };
+		665994391EFBB35A001DE476 /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665994381EFBB35A001DE476 /* AppIcon.swift */; };
+		6659943D1EFBB61F001DE476 /* rain.png in Resources */ = {isa = PBXBuildFile; fileRef = 6659943A1EFBB61F001DE476 /* rain.png */; };
+		6659943E1EFBB61F001DE476 /* clouds.png in Resources */ = {isa = PBXBuildFile; fileRef = 6659943B1EFBB61F001DE476 /* clouds.png */; };
+		6659943F1EFBB61F001DE476 /* clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 6659943C1EFBB61F001DE476 /* clear.png */; };
+		665994421EFBB9A8001DE476 /* AppIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665994401EFBB9A8001DE476 /* AppIconCell.swift */; };
+		665994431EFBB9A8001DE476 /* AppIconPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665994411EFBB9A8001DE476 /* AppIconPicker.swift */; };
 		6684F0961EF2501B004B3342 /* FontsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F0951EF2501B004B3342 /* FontsController.swift */; };
 		6684F0981EF250E2004B3342 /* Array+Execute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F0971EF250E2004B3342 /* Array+Execute.swift */; };
 		6684F09A1EF27EB8004B3342 /* UIView+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F0991EF27EB8004B3342 /* UIView+Fonts.swift */; };
@@ -107,12 +115,20 @@
 		663216BA1EE71C7200E17CBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		663216BC1EE71C7400E17CBD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		663216BD1EE7C28000E17CBD /* NSAttributedString+GooglePlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+GooglePlace.swift"; sourceTree = "<group>"; };
-		6659941B1EF8661E001DE476 /* FabricManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FabricManager.swift; path = ../Support/Classes/FabricManager.swift; sourceTree = "<group>"; };
+		6659941B1EF8661E001DE476 /* FabricManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FabricManager.swift; path = FabricManager.swift; sourceTree = "<group>"; };
 		6659941E1EF9407F001DE476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		665994231EFA4D4E001DE476 /* LanguageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageController.swift; sourceTree = "<group>"; };
 		665994251EFA4E3F001DE476 /* LanguageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
 		665994281EFA910C001DE476 /* UserDefaults+UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+UIImage.swift"; sourceTree = "<group>"; };
 		6659942A1EFAE802001DE476 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		6659942C1EFB1B41001DE476 /* AppIconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconManager.swift; sourceTree = "<group>"; };
+		6659942E1EFB1B6A001DE476 /* UIApplication+Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Icon.swift"; sourceTree = "<group>"; };
+		665994381EFBB35A001DE476 /* AppIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
+		6659943A1EFBB61F001DE476 /* rain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rain.png; sourceTree = "<group>"; };
+		6659943B1EFBB61F001DE476 /* clouds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clouds.png; sourceTree = "<group>"; };
+		6659943C1EFBB61F001DE476 /* clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear.png; sourceTree = "<group>"; };
+		665994401EFBB9A8001DE476 /* AppIconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconCell.swift; sourceTree = "<group>"; };
+		665994411EFBB9A8001DE476 /* AppIconPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconPicker.swift; sourceTree = "<group>"; };
 		6684F0951EF2501B004B3342 /* FontsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsController.swift; sourceTree = "<group>"; };
 		6684F0971EF250E2004B3342 /* Array+Execute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Execute.swift"; sourceTree = "<group>"; };
 		6684F0991EF27EB8004B3342 /* UIView+Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Fonts.swift"; sourceTree = "<group>"; };
@@ -241,7 +257,7 @@
 				6629CCE51EF2983100993446 /* FontPickerManager.swift */,
 			);
 			name = "Fonts picker";
-			path = Fonts;
+			path = "Fonts picker";
 			sourceTree = "<group>";
 		};
 		665994271EFA4E61001DE476 /* Language select */ = {
@@ -251,6 +267,32 @@
 				665994251EFA4E3F001DE476 /* LanguageCell.swift */,
 			);
 			name = "Language select";
+			path = "Language select";
+			sourceTree = "<group>";
+		};
+		665994301EFB1B77001DE476 /* AppIcon */ = {
+			isa = PBXGroup;
+			children = (
+				665994371EFBB276001DE476 /* AppIcons */,
+				6659942C1EFB1B41001DE476 /* AppIconManager.swift */,
+				665994381EFBB35A001DE476 /* AppIcon.swift */,
+				6659942E1EFB1B6A001DE476 /* UIApplication+Icon.swift */,
+				665994401EFBB9A8001DE476 /* AppIconCell.swift */,
+				665994411EFBB9A8001DE476 /* AppIconPicker.swift */,
+			);
+			name = AppIcon;
+			path = AppIcon;
+			sourceTree = "<group>";
+		};
+		665994371EFBB276001DE476 /* AppIcons */ = {
+			isa = PBXGroup;
+			children = (
+				6659943A1EFBB61F001DE476 /* rain.png */,
+				6659943B1EFBB61F001DE476 /* clouds.png */,
+				6659943C1EFBB61F001DE476 /* clear.png */,
+			);
+			name = AppIcons;
+			path = AppIcons;
 			sourceTree = "<group>";
 		};
 		66B9F0A81EB4DC6000526E2E = {
@@ -465,6 +507,7 @@
 				6659941D1EF9407F001DE476 /* Settings.storyboard */,
 				66E7DB491EE4176500619C71 /* SettingsController.swift */,
 				66BC02401EF2F0CC00067061 /* ColorsController.swift */,
+				665994301EFB1B77001DE476 /* AppIcon */,
 				6629CCE71EF29AD000993446 /* Search */,
 				665994271EFA4E61001DE476 /* Language select */,
 				6629CCE81EF29AE800993446 /* Fonts picker */,
@@ -557,8 +600,11 @@
 				66B9F0BF1EB4DC6000526E2E /* LaunchScreen.storyboard in Resources */,
 				663216B91EE71C7200E17CBD /* Localizable.strings in Resources */,
 				66B9F0BC1EB4DC6000526E2E /* Assets.xcassets in Resources */,
+				6659943F1EFBB61F001DE476 /* clear.png in Resources */,
 				66B9F0BA1EB4DC6000526E2E /* Main.storyboard in Resources */,
 				6659941F1EF9407F001DE476 /* Settings.storyboard in Resources */,
+				6659943D1EFBB61F001DE476 /* rain.png in Resources */,
+				6659943E1EFBB61F001DE476 /* clouds.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,6 +736,7 @@
 				6684F0981EF250E2004B3342 /* Array+Execute.swift in Sources */,
 				66B9F0F91EB4E5A400526E2E /* UITextField+Properties.swift in Sources */,
 				66B91DDE1EB54185002A49F3 /* ForecastDisplayManager.swift in Sources */,
+				665994391EFBB35A001DE476 /* AppIcon.swift in Sources */,
 				66B9F0D21EB4E05400526E2E /* UIView+Properties.swift in Sources */,
 				66BC024B1EF3B26000067061 /* AlamofireLogger.swift in Sources */,
 				66BC02511EF3E21800067061 /* NetworkActivityLogger.swift in Sources */,
@@ -701,12 +748,14 @@
 				66B9F1031EB4E6AB00526E2E /* String+LocalizationManager.swift in Sources */,
 				66B9F0F31EB4E33F00526E2E /* AssociationManager.swift in Sources */,
 				66B9F1171EB4F6DC00526E2E /* URL+Path.swift in Sources */,
+				6659942F1EFB1B6A001DE476 /* UIApplication+Icon.swift in Sources */,
 				66B9F10A1EB4F32D00526E2E /* Photo.swift in Sources */,
 				66B9F0E81EB4E20200526E2E /* Fonts+AdvancedViews.swift in Sources */,
 				66B9F0E21EB4E1C400526E2E /* Colors.swift in Sources */,
 				66B9F0F81EB4E5A400526E2E /* UISearchBar+Properties.swift in Sources */,
 				6684F09A1EF27EB8004B3342 /* UIView+Fonts.swift in Sources */,
 				66B9F0CF1EB4E05400526E2E /* NoDelayScrollView.swift in Sources */,
+				6659942D1EFB1B41001DE476 /* AppIconManager.swift in Sources */,
 				66B9F0EE1EB4E27C00526E2E /* Images.swift in Sources */,
 				66E7DB4A1EE4176500619C71 /* SettingsController.swift in Sources */,
 				66B9F1211EB523CE00526E2E /* Errors.swift in Sources */,
@@ -734,6 +783,7 @@
 				66B9F1151EB4F6DC00526E2E /* UITableView+Extensions.swift in Sources */,
 				66EFB67B1EF664A40099BF52 /* FontType.swift in Sources */,
 				66EFB6821EF840D20099BF52 /* Strings.swift in Sources */,
+				665994431EFBB9A8001DE476 /* AppIconPicker.swift in Sources */,
 				66B9F0F51EB4E4BD00526E2E /* AppearanceManager.swift in Sources */,
 				66B9F0F11EB4E33A00526E2E /* Fonts+Views.swift in Sources */,
 				6659941C1EF8661E001DE476 /* FabricManager.swift in Sources */,
@@ -745,6 +795,7 @@
 				66BC02461EF3093900067061 /* Logger.swift in Sources */,
 				665994261EFA4E3F001DE476 /* LanguageCell.swift in Sources */,
 				66B9F0ED1EB4E27C00526E2E /* BackgroundController.swift in Sources */,
+				665994421EFBB9A8001DE476 /* AppIconCell.swift in Sources */,
 				66B9F1081EB4F31E00526E2E /* PhotosService.swift in Sources */,
 				66B91DDC1EB52F88002A49F3 /* Weather.swift in Sources */,
 				66B9F0E31EB4E1C400526E2E /* Colors+Views.swift in Sources */,
@@ -776,7 +827,7 @@
 				6659941E1EF9407F001DE476 /* Base */,
 			);
 			name = Settings.storyboard;
-			path = ..;
+			path = .;
 			sourceTree = "<group>";
 		};
 		66B9F0B81EB4DC6000526E2E /* Main.storyboard */ = {
@@ -785,7 +836,7 @@
 				66B9F0B91EB4DC6000526E2E /* Base */,
 			);
 			name = Main.storyboard;
-			path = ../.;
+			path = .;
 			sourceTree = "<group>";
 		};
 		66B9F0BD1EB4DC6000526E2E /* LaunchScreen.storyboard */ = {
