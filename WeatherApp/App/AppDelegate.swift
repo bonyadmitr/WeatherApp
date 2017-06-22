@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
 //        NetworkActivityLogger.shared.level = .debug
-        NetworkActivityLogger.shared.startLogging()
+//        NetworkActivityLogger.shared.startLogging()
         
         NetworkActivityIndicatorManager.shared.isEnabled = true
         NetworkActivityIndicatorManager.shared.startDelay = 0
@@ -45,6 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         AppearanceManager.shared.configurateAll()
         AppearanceManager.shared.configureLocalizedAppearance()
+        
+        SettingsBundleManager.shared.setDefaults()
         
         return true
     }

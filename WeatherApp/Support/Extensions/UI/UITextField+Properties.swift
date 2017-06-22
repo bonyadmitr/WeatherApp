@@ -10,19 +10,16 @@ import UIKit
 
 extension UITextField {
     
-    private struct AssociatedKey {
-        static var placeholderColor = "viewExtension"
-    }
+    private static let association = AssociationManager<UIColor>()
     
     /// Placeholder color
     @IBInspectable var placeholderColor: UIColor? {
         get {
-            return objc_getAssociatedObject(self, &AssociatedKey.placeholderColor) as? UIColor
+            return UITextField.association[self]
         }
-        
         set {
             guard let value = newValue else { return }
-            objc_setAssociatedObject(self, &AssociatedKey.placeholderColor, value, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            UITextField.association[self] = value
             
             let att: [String : Any] = [NSForegroundColorAttributeName: value,
                                        NSFontAttributeName: font!]

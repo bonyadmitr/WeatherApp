@@ -40,7 +40,7 @@ final class FontsController: UIViewController {
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
-        searchController.searchBar.lzPlaceholder = tr(.search)
+        searchController.searchBar.placeholder = tr(.search)
         searchController.searchBar.scopeButtonTitles = [FontType.all.name,
                                                         FontType.regular.name,
                                                         FontType.light.name,
