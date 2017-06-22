@@ -52,6 +52,7 @@ extension AppIconPicker: UICollectionViewDataSource {
 extension AppIconPicker: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let icon = AppIcon.allValues[indexPath.row]
+        FabricManager.shared.log(appIcon: icon)
         if #available(iOS 10.3, *) {
             AppIconManager.shared.change(to: icon, withAlert: true)
         }

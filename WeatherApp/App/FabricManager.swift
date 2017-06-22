@@ -64,6 +64,10 @@ final class FabricManager: NSObject {
     func log(language: String) {
         Answers.logCustomEvent(withName: "selected language", customAttributes: ["language": language])
     }
+    
+    func log(appIcon: AppIcon) {
+        Answers.logCustomEvent(withName: "selected app icon", customAttributes: ["icon": appIcon.name ?? "main"])
+    }
 }
 extension FabricManager: CrashlyticsDelegate {
     func crashlyticsDidDetectReport(forLastExecution report: CLSReport, completionHandler: @escaping (Bool) -> Void) {
