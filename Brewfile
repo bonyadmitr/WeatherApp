@@ -14,8 +14,8 @@
 
 
 ## Start
-cask_args appdir: "/Applications"
-tap "caskroom/cask"
+#cask_args appdir: "/Applications"
+#tap "caskroom/cask"
 #maybe need: tap "homebrew/core"
 
 
