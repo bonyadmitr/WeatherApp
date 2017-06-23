@@ -14,4 +14,9 @@ target 'WeatherApp' do
   ## Code generator
   #pod 'SwiftGen'
 
+  target 'WeatherAppTests' do
+    inherit! :search_paths
+    pod 'KIF', :configurations => ['Debug']
+  end
+
 end

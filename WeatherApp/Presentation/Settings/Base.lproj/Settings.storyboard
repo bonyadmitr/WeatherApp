@@ -45,6 +45,7 @@
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="fontType" value="base"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="select_font"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="accessLabel" value="select_font"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <segue destination="RpU-8X-Fnx" kind="presentation" identifier="fonts" id="r6a-Cw-rLH"/>
@@ -59,6 +60,7 @@
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="fontType" value="base"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="select_color"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="accessLabel" value="select_color"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <segue destination="3Cl-8l-l6E" kind="presentation" identifier="colors" id="KW5-Yi-ZqW"/>
@@ -202,6 +204,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" id="R4F-Eb-kIb">
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="cancel"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessLabel" value="cancel"/>
                             </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="dismissSelf:" destination="wPS-Ga-l7n" id="qKA-go-FAh"/>
@@ -246,6 +249,7 @@
                                                 <barButtonItem key="rightBarButtonItem" title="Item" id="Oj8-VV-CIE">
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="cancel"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="accessLabel" value="cancel"/>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="dismissSelf:" destination="nak-OY-UBh" id="oiB-RF-hON"/>
