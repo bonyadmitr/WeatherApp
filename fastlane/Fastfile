@@ -428,6 +428,7 @@ platform :ios do
 
   desc "check metadata"
   lane :my_precheck do
+    # all settings in Precheckfile
     precheck
   end
 
