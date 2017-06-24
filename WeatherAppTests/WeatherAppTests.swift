@@ -22,5 +22,11 @@ class WeatherAppTests: BaseUITests {
     
     func testMain() {
         tap("settings")
+        
+        tap("select_font")
+        tap("cancel")
+        
+        tap("select_color")
+        tap("cancel")
     }
 }

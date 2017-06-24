@@ -15,7 +15,8 @@ SCHEME = "WeatherApp"
 TEAM_ID = ""
 DEV_NAME = "" #mayby need Team Name: Alessandro Bazzi
 
-TYPES = ["appstore", "adhoc", "development"]
+TYPES = ["development", "appstore", "adhoc"]
+CONFIGS = ["debug", "release", "adhoc"]
 #array.each { |x| puts x }
 #array.each_with_index {|val, index| puts "#{val} => #{index}" }
 
@@ -61,15 +62,17 @@ platform :ios do
 
   #--------------- Scripts ---------------
 
+  # will be need to replace for new fastlane carthage (not available for now)
   desc "Update Carthage dependencies"
-  lane :carthages do |options|
-      # will be need to replace for new fastlane carthage (not available for now)
-      sh "cd .. && carthage update --cache-builds --platform iOS"
+  lane :carthages do
+    Dir.chdir("..") do
+      sh "carthage update --cache-builds --platform iOS"
+    end
   end
 
-    desc "Install Cocoapods dependencies"
-  lane :pods do |options|
-      sh "cd .. && bundle e pod install"
+  desc "Install Cocoapods dependencies"
+  lane :pods do
+      sh "bundle e pod install"
 
       ## TODO
       # cocoapods(
@@ -78,12 +81,12 @@ platform :ios do
   end
   
   desc "Synchronize folders and groups in project for development"
-  lane :synx do |options|
+  lane :synx do
       sh "cd .. && bundle e synx --no-sort-by-name #{APP_NAME}.xcodeproj"
   end
 
   desc "Print code lines count"
-  lane :clocc do |options|
+  lane :clocc do
       Action.sh("cd .. && cloc ./#{APP_NAME}")
   end
 
@@ -91,7 +94,7 @@ platform :ios do
   #--------------- Single lanes ---------------
 
   desc "Creates new iOS apps on both the Apple Developer Portal and iTunes Connect"
-  lane :create do |options|
+  lane :create do
     produce(
       # username: USERNAME,
       # app_identifier: BUNDLE_ID,
@@ -109,7 +112,7 @@ platform :ios do
   end
 
   desc "Creates new .pem, .cer, and .p12 files to be uploaded to your push server"
-  lane :server do |options|
+  lane :server do
     pem(
       force: true,
       development: true, # false for Distribution
@@ -124,18 +127,10 @@ platform :ios do
     )
   end
 
-  ## TODO |options|
   desc "Creates all required certificates & provisioning profiles and stores them in a separate git repository"
-  lane :profiles do |options|
+  lane :profiles do
     TYPES.each { |type|
-      match(
-        type: type,
-        readonly: true, # Only fetch existing certificates and profiles, don't generate new ones
-        shallow_clone: true, # truncate the history to 1 revision
-        force_for_new_devices: true, # Renew the provisioning profiles if the device count on the developer portal has changed
-        skip_confirmation: false, # Disables confirmation prompts during nuke
-        skip_docs: false # Skip generation of a README.md for the created git repository
-      )
+      my_match(type: type)
     }
   end
 
@@ -197,27 +192,34 @@ platform :ios do
   lane :release do
     carthages
     pods
-    my_gym
     my_scan
 
-    profiles
+    my_match(type: appstore)
+    my_gym(config: release)
+
     screenshots
     my_precheck
     my_deliver
   end
 
 
-  lane :debug do
-    my_gym
-
+  lane :beta do
     my_scan
     profiles
+    my_gym(config: adhoc)
 
-    my_resign(type: adhoc)
+    # my_resign(type: adhoc)
     my_crashlytics
 
     my_resign(type: appstore)
     my_pilot
+  end
+
+  lane :fabric do
+    my_scan
+    my_match(type: adhoc)
+    my_gym(config: adhoc)
+    my_crashlytics
   end
 
 
@@ -252,9 +254,17 @@ platform :ios do
   #--------------- build ipa ---------------
 
   desc "Create ipa"
-  lane :my_gym do #build
+  lane :my_gym do |options|
+    
+    config = options[:config]
+
+    if !CONFIGS.include?(config)
+      raise("config can be debug, release or adhoc")
+      exit
+    end
+
     gym(
-      #configuration: "Adhoc", # Defaults to 'Release'
+      configuration: config, #"Adhoc", # Defaults to 'Release'
       scheme: SCHEME,
       silent: true, # Hide all information that's not necessary while building
       clean: false,
@@ -326,6 +336,7 @@ platform :ios do
     )
   end
 
+  # fastlane add_plugin applivery
   lane :my_applivery do
     applivery(
       app_id: "YOUR_APP_ID",            # Your Applivery App Id
@@ -335,24 +346,33 @@ platform :ios do
 
 
 
-  #--------------- resign ---------------
+  #--------------- Certs ---------------
 
-  #bash
-  #fastlane my_resign type:appstore
-
-  #ruby
-  #my_resign(type: appstore)
-
-  private_lane :my_resign do |options|
+  lane :my_match do |options|
 
     check_type(options)
     type = options[:type]
 
     match(
       type: type,
-      readonly: true,
-      shallow_clone: true
+      readonly: true, # Only fetch existing certificates and profiles, don't generate new ones
+      shallow_clone: true, # truncate the history to 1 revision
+      force_for_new_devices: true, # Renew the provisioning profiles if the device count on the developer portal has changed
+      skip_confirmation: false, # Disables confirmation prompts during nuke
+      skip_docs: false # Skip generation of a README.md for the created git repository
     )
+  end
+
+  #bash
+  #fastlane my_resign type:appstore
+
+  #ruby(fastlane)
+  #my_resign(type: appstore)
+
+  private_lane :my_resign do |options|
+
+    type = options[:type]
+    my_match(type: type)
 
     resign(ipa: "./#{APP_NAME}.ipa",
         signing_identity: "iPhone Distribution: #{DEV_NAME} (#{TEAM_ID})",
@@ -403,11 +423,10 @@ platform :ios do
 
   desc "run tests"
   lane :my_scan do #test
-    scan
-    # scan(
-    #   scheme: SCHEME,
-    #   code_coverage: true
-    # )
+    scan(
+      scheme: SCHEME,
+      code_coverage: true
+    )
   end
 
 
@@ -449,25 +468,18 @@ platform :ios do
   end
 
 
+
+
+
+
+
+
+
   #--------------- others ---------------
 
 
 
-
-
-
-  lane :build do |options|
-
-    if cached_build_available?
-      UI.important 'Skipping build because a cached build is available!'
-      next # skip doing the rest of this lane
-    end
-
-  end
-
-
-
-  lane :test do
+  lane :test2 do
     # ставим зависимости
     cocoapods(
       repo_update: is_ci
@@ -490,7 +502,7 @@ platform :ios do
 
 
 
-  lane :fabric do
+  lane :fabric2 do
     # ставим зависимости
     cocoapods(
       repo_update: is_ci
@@ -515,11 +527,8 @@ platform :ios do
 
   end
 
-  # need to test
-  #upload_symbols_to_crashlytics(dsym_path: "./build/AssistMobile.app.dSYM.zip")
 
-
-  lane :tf do
+  lane :tf2 do
     # ставим зависимости
     cocoapods(
       repo_update: is_ci
@@ -542,7 +551,5 @@ platform :ios do
     # выгружаем в TestFlight
     pilot
   end
-
-
 
 end

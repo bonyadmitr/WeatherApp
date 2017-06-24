@@ -70,9 +70,24 @@ Creates all required certificates & provisioning profiles and stores them in a s
 fastlane ios services
 ```
 
-### ios production
+### ios register
 ```
-fastlane ios production
+fastlane ios register
+```
+
+### ios release
+```
+fastlane ios release
+```
+Deploy a new version to the App Store
+### ios beta
+```
+fastlane ios beta
+```
+
+### ios fabric
+```
+fastlane ios fabric
 ```
 
 ### ios screenshots
@@ -95,11 +110,6 @@ fastlane ios my_frameit
 fastlane ios my_gym
 ```
 Create ipa
-### ios gym_carthage
-```
-fastlane ios gym_carthage
-```
-
 ### ios addTfTesters
 ```
 fastlane ios addTfTesters
@@ -130,16 +140,11 @@ fastlane ios diawi
 fastlane ios my_applivery
 ```
 
-### ios my_resign
+### ios my_match
 ```
-fastlane ios my_resign
+fastlane ios my_match
 ```
 
-### ios set_versions
-```
-fastlane ios set_versions
-```
-set versions from git tag
 ### ios my_deliver
 ```
 fastlane ios my_deliver
@@ -155,34 +160,24 @@ check metadata
 fastlane ios my_scan
 ```
 run tests
-### ios build
+### ios set_versions
 ```
-fastlane ios build
+fastlane ios set_versions
 ```
-
-### ios test
+set versions from git tag
+### ios test2
 ```
-fastlane ios test
-```
-
-### ios fabric
-```
-fastlane ios fabric
+fastlane ios test2
 ```
 
-### ios tf
+### ios fabric2
 ```
-fastlane ios tf
+fastlane ios fabric2
 ```
 
-### ios release
+### ios tf2
 ```
-fastlane ios release
-```
-Deploy a new version to the App Store
-### ios register
-```
-fastlane ios register
+fastlane ios tf2
 ```
 
 
