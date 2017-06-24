@@ -30,6 +30,14 @@ bundle e fastlane synx
 bundle e synx --no-sort-by-name WeatherApp.xcodeproj
 ```
 
+#### Generate app icons
+
+Path for image: `fastlane/metadata/app_icon.png`
+
+```bash
+bundle e fastlane appicons
+```
+
 #### Update Carthage dependencies and install new ones
 
 ```bash

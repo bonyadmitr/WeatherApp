@@ -9,13 +9,14 @@
 import UIKit
 
 extension UIApplication {
-    var mainAppIcon: UIImage? {
+    var appIcon: UIImage? {
         guard
             let bundleIcons = Bundle.main.infoDictionary?["CFBundleIcons"] as? [String: Any],
             let prima‌​ryIcon = bundleIcons["CFBundlePrimaryIcon"] as? [String: Any],
             let iconsArray = prima‌​ryIcon["CFBundleIconFiles"] as? [String],
-            let name = iconsArray.first
+            let name = iconsArray.last
             else { return nil }
-        return UIImage(named: name)
+        
+        return UIImage(named: name) /// or "AppIcon60x60"
     }
 }

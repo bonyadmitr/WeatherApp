@@ -33,7 +33,7 @@ enum AppIcon: String {
     var image: UIImage {
         switch self {
         case .primary:
-            return UIApplication.shared.mainAppIcon ?? UIImage()
+            return UIApplication.shared.appIcon ?? UIImage()
         default:
             return UIImage(named: self.rawValue)!
         }

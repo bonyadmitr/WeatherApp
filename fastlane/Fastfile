@@ -185,6 +185,16 @@ platform :ios do
   end
 
 
+  lane :appicons do
+    # image at least 1024x1024
+    appicon(
+      appicon_devices: [:ipad, :iphone], # defaults [:iphone]
+      appicon_path: 'WeatherApp/App/Resources/Assets.xcassets' # defaults in root Assets.xcassets
+      # appicon_image_file: 'spec/fixtures/Themoji.png', # defaults "fastlane/metadata/app_icon.png"
+      # appicon_name: # defaults AppIcon.appiconset
+    )
+  end
+
   #--------------- Main lanes ---------------
 
   # lane :production do

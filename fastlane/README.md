@@ -75,6 +75,11 @@ fastlane ios services
 fastlane ios register
 ```
 
+### ios appicons
+```
+fastlane ios appicons
+```
+
 ### ios release
 ```
 fastlane ios release
