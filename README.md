@@ -1,67 +1,76 @@
 ## To start project
 
-1. Install Bundler
-
-	```bash
-	sudo gem install bundler
-	```
-
-1. Install gems dependencies
-
-	```bash
-	bundle i
-	```
-
-1. Install Cocoapods dependencies
-
-	```bash
-	bundle e pod install
-	```
-
-1. Install Homebrew
-
-	```bash
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	```
-
-1. Homebrew/bundle installation
-
-	```bash
-	brew tap Homebrew/bundle
-	```
-	
-1. Install brews dependencies
-
-	```bash
-	brew bundle
-	```
-
-1. Install Carthage dependencies
-
-	```bash
-	carthage update --cache-builds --platform iOS
-	```
-
-
-<!--## To get certificates
-
 Enter project folder in terminal and run
 
 ```bash
-bundle e fastlane updateAllProfiles
+chmod +x ./install; ./install
 ```
 
-Full infomation at [AppManager](https://gitlab.smedialink.com/iOS/AppManager)-->
+> `chmod +x` needs to unlock custom scrpits.
 
-## To synchronize folders and groups in project for development
+> Without it you will get error: "Permission denied".
+
+> `./install` simply runs the script.
+
+## Terminal commands
+
+#### To get all certificates
 
 ```bash
+bundle e fastlane profiles
+# or
+bundle e match ... (one of: "development", "appstore", "adhoc")
+```
+
+#### To synchronize folders and groups in project for development
+
+```bash
+bundle e fastlane synx
+# or
 bundle e synx --no-sort-by-name WeatherApp.xcodeproj
 ```
+
+#### Generate app icons
+
+Path for image: `fastlane/metadata/app_icon.png`
+
+```bash
+bundle e fastlane appicons
+```
+
+#### Update Carthage dependencies and install new ones
+
+```bash
+bundle e fastlane carthages
+# or
+carthage update --cache-builds --platform iOS
+```
+
+#### Install Cocoapods dependencies
+
+```bash
+bundle e fastlane pods
+# or
+bundle e pod install
+```
+
+#### Print code lines count
+
+```bash
+bundle e fastlane clocc
+# or
+cloc ./WeatherApp
+```
+
 
 ## To do
 
 - [x] Add Carthage for most Cocoapods dependencies
 - [x] Add Carthage optimization
-- [ ] Synchronize Cocoapods and Carthage with one script install
+- [x] Synchronize Cocoapods and Carthage with one script install
 - [ ] add CHANGELOG.md
+- [ ] add CI
+- [ ] add DI
+- [ ] add tests
+- [ ] add data bases (core data, realm)
+- [ ] add debug screen to change urls

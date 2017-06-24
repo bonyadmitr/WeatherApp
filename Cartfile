@@ -20,3 +20,6 @@ github "onevcat/Kingfisher" ~> 3.0
 
 # UI
 github "bonyadmitr/KeyboardHideManager" "develop"
+
+# UI Tests
+github "shinydevelopment/SimulatorStatusMagic"

@@ -23,9 +23,45 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="152" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TZf-4q-dUw">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="XRz-7A-8I5">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NPJ-9v-1kJ">
+                                            <rect key="frame" x="91" y="29" width="137.5" height="120"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZb-Vd-49O">
+                                                    <rect key="frame" x="55" y="0.0" width="28" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="fontType" value="base"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="czTextColor" value="text"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QA4-H3-2wO">
+                                                    <rect key="frame" x="0.0" y="20.5" width="137.5" height="99.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="83"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="fontType" value="base"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="czTextColor" value="text"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="NPJ-9v-1kJ" firstAttribute="centerY" secondItem="XRz-7A-8I5" secondAttribute="centerY" id="Str-Hw-TIc"/>
+                                        <constraint firstItem="NPJ-9v-1kJ" firstAttribute="centerX" secondItem="XRz-7A-8I5" secondAttribute="centerX" id="k3P-7q-HPX"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ForecastCell" rowHeight="152" id="g4i-sl-5Gp" customClass="ForecastCell" customModule="WeatherApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="152"/>
+                                        <rect key="frame" x="0.0" y="207" width="320" height="152"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g4i-sl-5Gp" id="UCH-cn-Jbf">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="152"/>
@@ -156,6 +192,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" id="pVD-Bw-JDz">
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="settings"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessLabel" value="settings"/>
                             </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="actionSettingsButton:" destination="BYZ-38-t0r" id="4cP-kF-BOW"/>
@@ -166,7 +203,9 @@
                         </userDefinedRuntimeAttributes>
                     </navigationItem>
                     <connections>
+                        <outlet property="cityLabel" destination="RZb-Vd-49O" id="4H3-8f-YMP"/>
                         <outlet property="tableView" destination="TZf-4q-dUw" id="OuV-a7-TIb"/>
+                        <outlet property="tempratureLabel" destination="QA4-H3-2wO" id="nja-Dc-XDl"/>
                         <segue destination="ahP-2j-8zW" kind="show" identifier="settings" id="Tkv-ou-R4K"/>
                     </connections>
                 </viewController>
@@ -182,6 +221,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="gi0-6J-lcc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessLabel" value="main_weather_app"/>
+                        </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

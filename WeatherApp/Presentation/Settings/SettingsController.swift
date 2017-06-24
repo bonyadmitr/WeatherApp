@@ -12,6 +12,7 @@ import Alamofire
 final class SettingsController: UIViewController {
     
     @IBOutlet private weak var searchContainerView: UIView!
+    @IBOutlet weak var appPicker: AppIconPicker!
     
     fileprivate var searchController: SearchController!
     fileprivate var placesController = PlacesController()
@@ -22,6 +23,10 @@ final class SettingsController: UIViewController {
         
         setupSearchController()
         FontPickerManager.shared.delegates.add(self)
+        
+        if #available(*, iOS 10.3) {} else {
+            appPicker.isHidden = true
+        }
     }
     
     private func setupSearchController() {
@@ -30,7 +35,7 @@ final class SettingsController: UIViewController {
         searchController = SearchController(searchResultsController: placesController)
         searchController.setup(in: self)
         searchController.addSearchBar(to: searchContainerView)
-        searchController.searchBar.lzPlaceholder = "new_city"
+        searchController.searchBar.placeholder = tr(.newCity)
         searchController.searchResultsUpdater = self
     }
     
@@ -59,9 +64,9 @@ extension SettingsController: UISearchResultsUpdating {
     }
 }
 extension SettingsController: PlacesControllerDelegate {
-    func didSelect(place: String) {
+    func didSelect(place: Place) {
         searchController.isActive = false
-        UserDefaultsManager.shared.cityName = place
+        UserDefaultsManager.shared.place = place
     }
 }
 extension SettingsController: FontsControllerDelegate {

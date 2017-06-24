@@ -11,7 +11,11 @@ import UIKit
 /// create localization for custom and 3rd party classes
 extension String {
     public var localized: String {
-        return NSLocalizedString(self, comment: "")
+        let str = NSLocalizedString(self, comment: "")
+        if str == self {
+            print("⚠️ not found localization for: \(str) in: \(LocalizationManager.shared.currentLanguage) ⚠️")
+        }
+        return str
     }
 }
 
