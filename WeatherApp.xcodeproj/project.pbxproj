@@ -40,6 +40,7 @@
 		666226421EFFF08F000DDC4E /* BaseRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666226411EFFF08F000DDC4E /* BaseRealmObject.swift */; };
 		666226441EFFFAE9000DDC4E /* Promisable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666226431EFFFAE9000DDC4E /* Promisable.swift */; };
 		666226461F000879000DDC4E /* String+Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666226451F000879000DDC4E /* String+Substring.swift */; };
+		666226481F001BFB000DDC4E /* UIImage+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666226471F001BFB000DDC4E /* UIImage+Kingfisher.swift */; };
 		6684F0961EF2501B004B3342 /* FontsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F0951EF2501B004B3342 /* FontsController.swift */; };
 		6684F0981EF250E2004B3342 /* Array+Execute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F0971EF250E2004B3342 /* Array+Execute.swift */; };
 		6684F09A1EF27EB8004B3342 /* UIView+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F0991EF27EB8004B3342 /* UIView+Fonts.swift */; };
@@ -185,6 +186,7 @@
 		666226411EFFF08F000DDC4E /* BaseRealmObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseRealmObject.swift; path = ../Business/Entities/BaseRealmObject.swift; sourceTree = "<group>"; };
 		666226431EFFFAE9000DDC4E /* Promisable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promisable.swift; sourceTree = "<group>"; };
 		666226451F000879000DDC4E /* String+Substring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Substring.swift"; sourceTree = "<group>"; };
+		666226471F001BFB000DDC4E /* UIImage+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Kingfisher.swift"; path = "../UI/UIImage+Kingfisher.swift"; sourceTree = "<group>"; };
 		6684F0951EF2501B004B3342 /* FontsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsController.swift; sourceTree = "<group>"; };
 		6684F0971EF250E2004B3342 /* Array+Execute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Execute.swift"; sourceTree = "<group>"; };
 		6684F0991EF27EB8004B3342 /* UIView+Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Fonts.swift"; sourceTree = "<group>"; };
@@ -640,6 +642,7 @@
 				66E7DB471EE3F91300619C71 /* Kingfisher+Promise.swift */,
 				66B9F1181EB4F6EF00526E2E /* Alamofire+PromisableMapping.swift */,
 				663216BD1EE7C28000E17CBD /* NSAttributedString+GooglePlace.swift */,
+				666226471F001BFB000DDC4E /* UIImage+Kingfisher.swift */,
 			);
 			path = 3rd;
 			sourceTree = "<group>";
@@ -1136,6 +1139,7 @@
 				66B9F1211EB523CE00526E2E /* Errors.swift in Sources */,
 				66EFB67E1EF824CA0099BF52 /* Emptyable protocol.swift in Sources */,
 				66BC02411EF2F0CC00067061 /* ColorsController.swift in Sources */,
+				666226481F001BFB000DDC4E /* UIImage+Kingfisher.swift in Sources */,
 				666226361EFFEC58000DDC4E /* RealmStorageProtocols.swift in Sources */,
 				6629CCE61EF2983100993446 /* FontPickerManager.swift in Sources */,
 				66B9F0D11EB4E05400526E2E /* UIResponder+Set.swift in Sources */,

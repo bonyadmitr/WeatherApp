@@ -60,9 +60,10 @@ final class ViewController: BackgroundController {
         }.then { url -> Promise<UIImage> in
             ImageDownloader.default.downloadImage(with: url)
         }.then { image -> Void in
-            self.backImageView.image = image
-            Images.background = image
-        }
+            let img = image.image(for: self.backImageView.bounds.size)
+            self.backImageView.image = img
+            Images.background = img
+        }.catchAndLog()
     }
     
     private func getForecastWeather(for text: String) {
@@ -74,6 +75,6 @@ final class ViewController: BackgroundController {
     private func getCurrentWeather(for text: String) {
         _ = WeatherService.shared.current(for: text).then { current -> Void in
             self.tempratureLabel.text = String(Int(current.temperature))
-        }
+        }.catchAndLog()
     }
 }
