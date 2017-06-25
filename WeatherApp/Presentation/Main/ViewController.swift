@@ -66,8 +66,8 @@ final class ViewController: BackgroundController {
     }
     
     private func getForecastWeather(for text: String) {
-        _ = WeatherService.shared.forecast(for: text).then { forecastResult -> Void in
-            self.dataSource.forecasts = forecastResult.list
+        WeatherService.shared.forecast(for: text) { forecast -> Void in
+            self.dataSource.forecasts = forecast
         }
     }
     

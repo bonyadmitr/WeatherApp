@@ -1,3 +1,11 @@
+//
+//  Weather.swift
+//  WeatherApp
+//
+//  Created by Bondar Yaroslav on 25/06/2017.
+//  Copyright © 2017 Bondar Yaroslav. All rights reserved.
+//
+
 import ObjectMapper
 
 class WeatherCommon: Mappable {
@@ -32,8 +40,7 @@ class WeatherCurrent: WeatherCommon {
     }
 }
 
-class WeatherForecast: WeatherCommon {
-    
+class WeatherForecast: WeatherCommon, Promisable {
     var dateInterval: Int = 0
     
     override func mapping(map: Map) {
