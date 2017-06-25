@@ -23,7 +23,10 @@ final class SettingsController: UIViewController {
         
         setupSearchController()
         FontPickerManager.shared.delegates.add(self)
-        
+        addAppPicker()
+    }
+    
+    private func addAppPicker() {
         if #available(*, iOS 10.3) {} else {
             appPicker.isHidden = true
         }
