@@ -99,3 +99,14 @@ final class Logger {
         print(res)
     }
 }
+
+
+import RealmSwift
+extension Logger {
+    func printRealmFilePath() {
+        let realmFilePath = Realm.Configuration.defaultConfiguration.fileURL?.deletingLastPathComponent().absoluteString
+        let strLength = 7 /// "file://".characters.count
+        let removedFilePath = realmFilePath?[from: strLength] ?? "Realm path is nil"
+        log("Realm database is here: \(removedFilePath)")
+    }
+}

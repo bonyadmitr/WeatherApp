@@ -39,6 +39,7 @@
 		666226401EFFEDF9000DDC4E /* WeatherRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662263F1EFFEDF9000DDC4E /* WeatherRealm.swift */; };
 		666226421EFFF08F000DDC4E /* BaseRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666226411EFFF08F000DDC4E /* BaseRealmObject.swift */; };
 		666226441EFFFAE9000DDC4E /* Promisable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666226431EFFFAE9000DDC4E /* Promisable.swift */; };
+		666226461F000879000DDC4E /* String+Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666226451F000879000DDC4E /* String+Substring.swift */; };
 		6684F0961EF2501B004B3342 /* FontsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F0951EF2501B004B3342 /* FontsController.swift */; };
 		6684F0981EF250E2004B3342 /* Array+Execute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F0971EF250E2004B3342 /* Array+Execute.swift */; };
 		6684F09A1EF27EB8004B3342 /* UIView+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F0991EF27EB8004B3342 /* UIView+Fonts.swift */; };
@@ -183,6 +184,7 @@
 		6662263F1EFFEDF9000DDC4E /* WeatherRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherRealm.swift; sourceTree = "<group>"; };
 		666226411EFFF08F000DDC4E /* BaseRealmObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseRealmObject.swift; path = ../Business/Entities/BaseRealmObject.swift; sourceTree = "<group>"; };
 		666226431EFFFAE9000DDC4E /* Promisable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promisable.swift; sourceTree = "<group>"; };
+		666226451F000879000DDC4E /* String+Substring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Substring.swift"; sourceTree = "<group>"; };
 		6684F0951EF2501B004B3342 /* FontsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsController.swift; sourceTree = "<group>"; };
 		6684F0971EF250E2004B3342 /* Array+Execute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Execute.swift"; sourceTree = "<group>"; };
 		6684F0991EF27EB8004B3342 /* UIView+Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Fonts.swift"; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 				66DA17091EFBF6B500075D7E /* UI */,
 				6684F0971EF250E2004B3342 /* Array+Execute.swift */,
 				66B9F1121EB4F6DC00526E2E /* URL+Path.swift */,
+				666226451F000879000DDC4E /* String+Substring.swift */,
 				66EFB67D1EF824CA0099BF52 /* Emptyable protocol.swift */,
 				66957F191EE163C7007B5D21 /* Radians+Extensions.swift */,
 				665994281EFA910C001DE476 /* UserDefaults+UIImage.swift */,
@@ -1177,6 +1180,7 @@
 				66B9F1081EB4F31E00526E2E /* PhotosService.swift in Sources */,
 				66B91DDC1EB52F88002A49F3 /* Weather.swift in Sources */,
 				66B9F0E31EB4E1C400526E2E /* Colors+Views.swift in Sources */,
+				666226461F000879000DDC4E /* String+Substring.swift in Sources */,
 				66B91DDA1EB52EC2002A49F3 /* WeatherService.swift in Sources */,
 				6662263E1EFFEDB4000DDC4E /* Realm+Array.swift in Sources */,
 				66BC024D1EF3BFC700067061 /* Watchdog.swift in Sources */,

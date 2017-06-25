@@ -10,7 +10,7 @@ import PromiseKit
 import RealmSwift
 
 protocol WeatherForecastStorage {
-        func getAll() -> Promise<[WeatherForecastRealm]>
+    func getAll() -> Promise<[WeatherForecastRealm]>
     func save(_ objects: [WeatherForecastRealm]) -> Promise<[WeatherForecastRealm]>
 }
 

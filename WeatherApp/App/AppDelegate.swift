@@ -9,6 +9,7 @@
 import UIKit
 import GooglePlaces
 import AlamofireNetworkActivityIndicator
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -48,6 +49,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         SettingsBundleManager.shared.setDefaults()
         
+        configRealm()
+        
         return true
     }
     
@@ -57,6 +60,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         window.rootViewController = storyboard.instantiateViewController(withIdentifier: "startVC")
         UIView.transition(with: window, duration: 0.5, options: .transitionFlipFromLeft, animations: {}, completion: nil)
+    }
+    
+    private func configRealm() {
+        let configuration = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
+        Realm.Configuration.defaultConfiguration = configuration
+        Logger.shared.printRealmFilePath()
     }
     
 

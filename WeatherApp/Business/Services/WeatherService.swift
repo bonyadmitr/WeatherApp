@@ -48,7 +48,7 @@ class WeatherService {
             handler(weatherForecast)
             let realms = weatherForecast.map { $0.dbObject }
             return self.forecastStorage.save(realms)
-        }
+        }.catchAndLog()
     }
     
     func forecast(for text: String) -> Promise<[WeatherForecast]> {
