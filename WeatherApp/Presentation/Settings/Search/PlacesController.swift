@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-// MARK: PlacesControllerDelegate
+// MARK: - PlacesControllerDelegate
 protocol PlacesControllerDelegate: class {
     func didSelect(place: Place)
 }

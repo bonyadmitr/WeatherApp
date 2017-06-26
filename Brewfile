@@ -29,8 +29,9 @@ brew 'swiftlint'
 
 brew 'swiftgen'
 
-## Taylor is a Swift code quality metrics tool.
-#brew 'taylor'
+## Tailor is a Swift code quality metrics tool.
+cask 'java' # need for Tailor
+brew 'tailor'
 
 ## Appium test automation framework
 #cask 'appium'

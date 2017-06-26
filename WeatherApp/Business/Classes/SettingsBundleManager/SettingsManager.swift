@@ -41,7 +41,7 @@ class SettingsBundleManager: NSObject {
     /// You have to register the default values yourself. ??? for iOS 10.3
     /// ??? You have to synhronize default values in plists and in registration (here)
     private func registerDefaults() {
-        let settingsDefaults: [String : Any] = [
+        let settingsDefaults: [String: Any] = [
             DefaultKeys.appVersion: "",
             DefaultKeys.appAuthor: "",
             DefaultKeys.analyticsEnabled: true
@@ -81,7 +81,7 @@ class SettingsBundleManager: NSObject {
     }
 
     /// #2
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
         
         FabricManager.shared.isEnabled = UserDefaultsManager.shared.isAnalyticsEnabled
 

@@ -12,7 +12,7 @@ import Alamofire
 final class SettingsController: UIViewController {
     
     @IBOutlet private weak var searchContainerView: UIView!
-    @IBOutlet weak var appPicker: AppIconPicker!
+    @IBOutlet private weak var appPicker: AppIconPicker!
     
     fileprivate var searchController: SearchController!
     fileprivate var placesController = PlacesController()

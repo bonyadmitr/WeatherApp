@@ -21,7 +21,7 @@ extension UITextField {
             guard let value = newValue else { return }
             UITextField.association[self] = value
             
-            let att: [String : Any] = [NSForegroundColorAttributeName: value,
+            let att: [String: Any] = [NSForegroundColorAttributeName: value,
                                        NSFontAttributeName: font!]
             attributedPlaceholder = NSAttributedString(string: placeholder ?? "", attributes: att)
         }

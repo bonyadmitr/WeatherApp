@@ -11,11 +11,11 @@ import UIKit
 extension UIColor {
     
     open func lighter(by percentage: CGFloat = 30) -> UIColor? {
-        return adjust(by: abs(percentage) )
+        return adjust(by: abs(percentage))
     }
     
     open func darker(by percentage: CGFloat = 30) -> UIColor? {
-        return adjust(by: -1 * abs(percentage) )
+        return adjust(by: -1 * abs(percentage))
     }
     
     open func adjust(by percentage: CGFloat = 30) -> UIColor? {

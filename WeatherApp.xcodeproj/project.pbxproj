@@ -755,11 +755,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66B9F0C31EB4DC6000526E2E /* Build configuration list for PBXNativeTarget "WeatherApp" */;
 			buildPhases = (
-				4ACDBF25CC016BEDCA1C58F1 /* [CP] Check Pods Manifest.lock */,
 				66EFB67F1EF837EB0099BF52 /* SwiftGen */,
+				66EFB67C1EF7BA640099BF52 /* Swiftlint */,
+				66EACBA11F01BE4700C99ED2 /* Tailor */,
+				667F4EFA1F01CA7E00545206 /* CopyPasteDetect */,
+				4ACDBF25CC016BEDCA1C58F1 /* [CP] Check Pods Manifest.lock */,
 				66B9F0AD1EB4DC6000526E2E /* Sources */,
 				66B9F0AE1EB4DC6000526E2E /* Frameworks */,
-				66EFB67C1EF7BA640099BF52 /* Swiftlint */,
 				66B9F0AF1EB4DC6000526E2E /* Resources */,
 				66B9F0C81EB4DEC300526E2E /* Carthage */,
 				1134C469E6D2EE607DC009EB /* [CP] Embed Pods Frameworks */,
@@ -942,6 +944,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" a5d85d058a83a56ab8902af20d910351fd97fc9f 049df64e3d3a6bf913f7600786d68b6d277aa85207a46610e00732276bb3f2a7";
 		};
+		667F4EFA1F01CA7E00545206 /* CopyPasteDetect */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = CopyPasteDetect;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh ./Scripts/copyPaste.sh";
+		};
 		66B9F0C81EB4DEC300526E2E /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -973,6 +989,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/bin/sh ./Scripts/carthage.sh";
+		};
+		66EACBA11F01BE4700C99ED2 /* Tailor */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Tailor;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh ./Scripts/tailor.sh";
 		};
 		66EFB67C1EF7BA640099BF52 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1276,6 +1306,114 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		667F4EF61F01C72A00545206 /* Analyze */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Analyze;
+		};
+		667F4EF71F01C72A00545206 /* Analyze */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 159978EE96E9001D5107BDD1 /* Pods-WeatherApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 227NMT55ZD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = WeatherApp/App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = by.WeatherApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Analyze;
+		};
+		667F4EF81F01C72A00545206 /* Analyze */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD124F408C14509F1A2C33DA /* Pods-WeatherAppTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = WeatherAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = by.WeatherAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherApp.app/WeatherApp";
+			};
+			name = Analyze;
+		};
+		667F4EF91F01C72A00545206 /* Analyze */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = WeatherAppUITests2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = by.WeatherAppUITests2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = WeatherApp;
+			};
+			name = Analyze;
+		};
 		66B9F0C11EB4DC6000526E2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1491,6 +1629,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66B9F0C11EB4DC6000526E2E /* Debug */,
+				667F4EF61F01C72A00545206 /* Analyze */,
 				66B9F0C21EB4DC6000526E2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1500,6 +1639,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66B9F0C41EB4DC6000526E2E /* Debug */,
+				667F4EF71F01C72A00545206 /* Analyze */,
 				66B9F0C51EB4DC6000526E2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1509,6 +1649,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66F976781EFD41090014FB8E /* Debug */,
+				667F4EF81F01C72A00545206 /* Analyze */,
 				66F976791EFD41090014FB8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1518,6 +1659,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66F9768C1EFD465A0014FB8E /* Debug */,
+				667F4EF91F01C72A00545206 /* Analyze */,
 				66F9768D1EFD465A0014FB8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

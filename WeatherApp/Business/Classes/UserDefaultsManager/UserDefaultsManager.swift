@@ -42,7 +42,7 @@ final class UserDefaultsManager {
         userDefaults.setValue("Bondar Yaroslav", forKey: DefaultKeys.appAuthor)
     }
     
-    func register(defaults registrationDictionary: [String : Any]) {
+    func register(defaults registrationDictionary: [String: Any]) {
         userDefaults.register(defaults: registrationDictionary)
     }
 }

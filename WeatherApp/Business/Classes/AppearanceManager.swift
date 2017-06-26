@@ -43,7 +43,7 @@ struct AppearanceManager {
     /// https://stackoverflow.com/questions/29912489/how-to-remove-all-navigationbar-back-button-title
     func removeAllBackButtonTitles() {
         let offset = UIOffset(horizontal: 0, vertical: -60)
-        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(offset, for:.default)
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(offset, for: .default)
     }
     
 //    func configureNavigationItem() {

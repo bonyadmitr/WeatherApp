@@ -17,7 +17,7 @@ extension FontsControllerDelegate {
 
 final class FontsController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet fileprivate weak var tableView: UITableView!
     
     weak var delegate: FontsControllerDelegate?
 

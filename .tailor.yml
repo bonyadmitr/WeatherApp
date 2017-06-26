@@ -1,0 +1,48 @@
+## swiftlint.yml
+## https://github.com/realm/SwiftLint
+
+## Install
+## or #1
+## brew install swiftlint
+
+## Run Script Phase
+# if which swiftlint >/dev/null; then
+#   swiftlint
+# else
+#   echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+# fi
+
+## or #2
+## pod 'SwiftLint'
+
+## Run Script Phase
+# "${PODS_ROOT}/SwiftLint/swiftlint"
+
+
+exclude:
+  - Pods
+  - Carthage
+  - fastlane
+  - Scripts
+  - 'R.generated.swift'
+
+except:
+    - trailing-whitespace
+    - function-whitespace
+    - comment-whitespace
+    - angle-bracket-whitespace
+    - parenthesis-whitespace # subscript
+    - forced-type-cast
+    - brace-style
+    - constant-naming # CFBundlePrimaryIcon
+
+
+
+
+
+
+
+
+
+
+

@@ -13,8 +13,8 @@ import Kingfisher
 final class ViewController: BackgroundController {
     
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet weak var cityLabel: UILabel!
-    @IBOutlet weak var tempratureLabel: UILabel!
+    @IBOutlet private weak var cityLabel: UILabel!
+    @IBOutlet private weak var tempratureLabel: UILabel!
     
     private let dataSource = ForecastDisplayManager()
     private var text = ""

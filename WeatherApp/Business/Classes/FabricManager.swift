@@ -24,7 +24,7 @@ final class FabricManager: NSObject {
         setKeysForCrash()
     }
     
-    func logCustomEvent(withName eventName: String, customAttributes customAttributesOrNil: [String : Any]? = nil) {
+    func logCustomEvent(withName eventName: String, customAttributes customAttributesOrNil: [String: Any]? = nil) {
         if !isEnabled { return }
         Answers.logCustomEvent(withName: eventName, customAttributes: customAttributesOrNil)
     }
