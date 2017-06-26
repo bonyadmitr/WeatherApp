@@ -10,7 +10,7 @@ import UIKit
 
 final class LanguageController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet fileprivate weak var tableView: UITableView!
     
     var languages: [String] = LocalizationManager.shared.availableLanguages
     var displayLanguages: [String] = LocalizationManager.shared.displayLanguages
