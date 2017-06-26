@@ -1,3 +1,7 @@
+## Demo
+
+[Try app at Appetize.io](https://appetize.io/app/j5z5kkhjuczebzqucgq1vdgvzm?device=iphone5s&scale=75&orientation=portrait&osVersion=10.3)
+
 ## To start project
 
 Enter project folder in terminal and run
@@ -61,7 +65,6 @@ bundle e fastlane clocc
 # or
 cloc ./WeatherApp
 ```
-
 
 ## To do
 
