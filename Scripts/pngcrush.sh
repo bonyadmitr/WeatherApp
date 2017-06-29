@@ -1,10 +1,31 @@
 #!/bin/sh
 
+# warrings from shellcheck:
+# SC2039: In POSIX sh, arrays are undefined
+
 if which pngcrush >/dev/null; then
 
-	all_pngs=$(find ./WeatherApp -type f -name "*.png")
+	result_file_path="./Scripts/pngcrush_result.txt"
 
-	for png in $all_pngs; do
+	## read file paths from file
+	IFS=$'\n' read -d '' -r -a all_pngs_file < "$result_file_path"
+	## find new ones
+	all_pngs_find=( $(find ./WeatherApp -type f -name "*.png") )
+	## write new paths to file
+	printf "%s\n" "${all_pngs_find[@]}" > "$result_file_path"
+
+	## filter new files with old ones
+	for j in "${!all_pngs_file[@]}"; do
+	  for i in "${!all_pngs_find[@]}"; do
+	    if [ "${all_pngs_find[$i]}" = "${all_pngs_file[$j]}" ]; then
+	      unset "all_pngs_find[$i]"
+	      break 1
+	    fi
+	  done
+	done
+
+	## exec pngcrush for new files
+	for png in "${all_pngs_find[@]}"; do
 	    echo "pngcrush $png ..."
 	    res=$(pngcrush -brute -reduce "$png" temp.png > /dev/null 2>&1)
 
