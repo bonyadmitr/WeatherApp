@@ -42,6 +42,16 @@ Path for image: `fastlane/metadata/app_icon.png`
 bundle e fastlane appicons
 ```
 
+#### Optimize png images in project folder
+
+```bash
+# for first run:
+chmod +x ./Scripts/pngcrush.sh; ./Scripts/pngcrush.sh
+
+# and others:
+./Scripts/pngcrush.sh
+```
+
 #### Update Carthage dependencies and install new ones
 
 ```bash
