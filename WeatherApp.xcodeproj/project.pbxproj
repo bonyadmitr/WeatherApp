@@ -109,6 +109,7 @@
 		66BC024D1EF3BFC700067061 /* Watchdog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC024C1EF3BFC700067061 /* Watchdog.swift */; };
 		66BC024F1EF3CA0E00067061 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC024E1EF3CA0E00067061 /* MainView.swift */; };
 		66BC02511EF3E21800067061 /* NetworkActivityLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC02501EF3E21800067061 /* NetworkActivityLogger.swift */; };
+		66C22C8C1F0AD47E0045AB8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66C22C8E1F0AD47E0045AB8F /* InfoPlist.strings */; };
 		66CFDE151EEB209A00A54C6B /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CFDE141EEB209A00A54C6B /* UIView+Layer.swift */; };
 		66DA16FB1EFBC27700075D7E /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA16F91EFBC27700075D7E /* SettingsManager.swift */; };
 		66DA16FE1EFBC29200075D7E /* UIApplication+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA16FD1EFBC29200075D7E /* UIApplication+Version.swift */; };
@@ -159,7 +160,6 @@
 		663216B01EE7187600E17CBD /* AutocompleteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocompleteManager.swift; sourceTree = "<group>"; };
 		663216B21EE719B100E17CBD /* PlacesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesController.swift; sourceTree = "<group>"; };
 		663216B41EE71AC800E17CBD /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
-		663216BA1EE71C7200E17CBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		663216BC1EE71C7400E17CBD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		663216BD1EE7C28000E17CBD /* NSAttributedString+GooglePlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+GooglePlace.swift"; sourceTree = "<group>"; };
 		6659941B1EF8661E001DE476 /* FabricManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FabricManager.swift; sourceTree = "<group>"; };
@@ -258,6 +258,9 @@
 		66BC024C1EF3BFC700067061 /* Watchdog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Watchdog.swift; sourceTree = "<group>"; };
 		66BC024E1EF3CA0E00067061 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		66BC02501EF3E21800067061 /* NetworkActivityLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkActivityLogger.swift; sourceTree = "<group>"; };
+		66C22C911F0ADD850045AB8F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		66C22C921F0ADE710045AB8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		66C22C941F0ADEC90045AB8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		66CFDE141EEB209A00A54C6B /* UIView+Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
 		66DA16F91EFBC27700075D7E /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		66DA16FD1EFBC29200075D7E /* UIApplication+Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Version.swift"; sourceTree = "<group>"; };
@@ -722,6 +725,7 @@
 				66B9F0EC1EB4E27C00526E2E /* Images.swift */,
 				66B9F0BB1EB4DC6000526E2E /* Assets.xcassets */,
 				663216BB1EE71C7200E17CBD /* Localizable.strings */,
+				66C22C8E1F0AD47E0045AB8F /* InfoPlist.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -878,6 +882,7 @@
 				6659943D1EFBB61F001DE476 /* rain.png in Resources */,
 				66DA17011EFBC42400075D7E /* Settings.bundle in Resources */,
 				6659943E1EFBB61F001DE476 /* clouds.png in Resources */,
+				66C22C8C1F0AD47E0045AB8F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1000,7 +1005,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftgen >/dev/null; then\n    swiftgen strings \"$PROJECT_DIR/WeatherApp/App/Resources/Base.lproj/Localizable.strings\" --output \"$PROJECT_DIR/WeatherApp/App/Resources/Strings.swift\" -t swift3\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi";
+			shellScript = "/bin/sh ./Scripts/swiftgen.sh";
 		};
 		66F9767E1EFD42950014FB8E /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1239,8 +1244,8 @@
 		663216BB1EE71C7200E17CBD /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				663216BA1EE71C7200E17CBD /* Base */,
 				663216BC1EE71C7400E17CBD /* ru */,
+				66C22C941F0ADEC90045AB8F /* en */,
 			);
 			name = Localizable.strings;
 			path = .;
@@ -1271,6 +1276,15 @@
 			);
 			name = LaunchScreen.storyboard;
 			path = .;
+			sourceTree = "<group>";
+		};
+		66C22C8E1F0AD47E0045AB8F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66C22C911F0ADD850045AB8F /* ru */,
+				66C22C921F0ADE710045AB8F /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -1,3 +1,6 @@
+## add to xcode run script
+# /bin/sh ./Scripts/swiftlint.sh
+
 # This allows disabling the run script when running on CI and running the linter twice.
 # if [ ! -z "$RUNNING_ON_CI" ]
 # then
