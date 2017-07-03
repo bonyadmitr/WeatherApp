@@ -110,6 +110,7 @@
 		66BC024F1EF3CA0E00067061 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC024E1EF3CA0E00067061 /* MainView.swift */; };
 		66BC02511EF3E21800067061 /* NetworkActivityLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC02501EF3E21800067061 /* NetworkActivityLogger.swift */; };
 		66C22C8C1F0AD47E0045AB8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66C22C8E1F0AD47E0045AB8F /* InfoPlist.strings */; };
+		66C22C961F0AF1F20045AB8F /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C22C951F0AF1F20045AB8F /* SpringLabel.swift */; };
 		66CFDE151EEB209A00A54C6B /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CFDE141EEB209A00A54C6B /* UIView+Layer.swift */; };
 		66DA16FB1EFBC27700075D7E /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA16F91EFBC27700075D7E /* SettingsManager.swift */; };
 		66DA16FE1EFBC29200075D7E /* UIApplication+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA16FD1EFBC29200075D7E /* UIApplication+Version.swift */; };
@@ -261,6 +262,7 @@
 		66C22C911F0ADD850045AB8F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		66C22C921F0ADE710045AB8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		66C22C941F0ADEC90045AB8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		66C22C951F0AF1F20045AB8F /* SpringLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringLabel.swift; sourceTree = "<group>"; };
 		66CFDE141EEB209A00A54C6B /* UIView+Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
 		66DA16F91EFBC27700075D7E /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		66DA16FD1EFBC29200075D7E /* UIApplication+Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Version.swift"; sourceTree = "<group>"; };
@@ -476,6 +478,7 @@
 				66B9F0C91EB4E05400526E2E /* KeyboardLayoutConstraint.swift */,
 				66B9F0CA1EB4E05400526E2E /* NoDelayScrollView.swift */,
 				6629CCE31EF294AC00993446 /* MulticastDelegate.swift */,
+				66C22C951F0AF1F20045AB8F /* SpringLabel.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1169,6 +1172,7 @@
 				663216B31EE719B100E17CBD /* PlacesController.swift in Sources */,
 				66B9F1191EB4F6EF00526E2E /* Alamofire+PromisableMapping.swift in Sources */,
 				663216B51EE71AC800E17CBD /* SearchController.swift in Sources */,
+				66C22C961F0AF1F20045AB8F /* SpringLabel.swift in Sources */,
 				66B9F0B51EB4DC6000526E2E /* AppDelegate.swift in Sources */,
 				66B9F11B1EB4F8D300526E2E /* BackendError.swift in Sources */,
 				66B9F0E71EB4E20200526E2E /* Fonts.swift in Sources */,
