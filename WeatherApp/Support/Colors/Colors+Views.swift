@@ -8,7 +8,7 @@
 
 import UIKit
 
-fileprivate let colorError = "there is no color type:"
+private let colorError = "there is no color type:"
 
 extension UIView {
     fileprivate func colorErrorMessage(for value: Any) -> String {

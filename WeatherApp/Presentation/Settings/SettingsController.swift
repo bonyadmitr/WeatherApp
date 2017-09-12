@@ -38,7 +38,7 @@ final class SettingsController: UIViewController {
         searchController = SearchController(searchResultsController: placesController)
         searchController.setup(in: self)
         searchController.addSearchBar(to: searchContainerView)
-        searchController.searchBar.placeholder = tr(.newCity)
+        searchController.searchBar.placeholder = L10n.newCity
         searchController.searchResultsUpdater = self
     }
     

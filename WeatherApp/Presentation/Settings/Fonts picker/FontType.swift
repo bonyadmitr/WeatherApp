@@ -18,13 +18,13 @@ enum FontType: Int {
     var name: String {
         switch self {
         case .all:
-            return tr(.all)
+            return L10n.all
         case .regular:
-            return tr(.regular)
+            return L10n.regular
         case .light:
-            return tr(.light)
+            return L10n.light
         case .bold:
-            return tr(.bold)
+            return L10n.bold
         }
     }
     

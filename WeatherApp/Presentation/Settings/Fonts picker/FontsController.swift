@@ -40,7 +40,7 @@ final class FontsController: UIViewController {
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
-        searchController.searchBar.placeholder = tr(.search)
+        searchController.searchBar.placeholder = L10n.search
         searchController.searchBar.scopeButtonTitles = [FontType.all.name,
                                                         FontType.regular.name,
                                                         FontType.light.name,
@@ -75,7 +75,7 @@ extension FontsController: UITableViewDataSource {
             return fontFamilies.count
         }
         let noDataLabel = UILabel()
-        noDataLabel.lzText = tr(.notFound)
+        noDataLabel.lzText = L10n.notFound
         noDataLabel.textAlignment = .center
         tableView.backgroundView = noDataLabel
         return 0

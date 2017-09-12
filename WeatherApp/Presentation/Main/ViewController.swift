@@ -26,7 +26,7 @@ final class ViewController: BackgroundController {
         
         dataSource.tableView = tableView
         
-        tableView.addRefreshControl(title: tr(.pullRefresh), color: Colors.text) { [weak self] refreshControl in
+        tableView.addRefreshControl(title: L10n.pullRefresh, color: Colors.text) { [weak self] refreshControl in
             guard let guardSelf = self else { return }
             guardSelf.getCurrentWeather(for: guardSelf.text)
             guardSelf.getForecastWeather(for: guardSelf.text)

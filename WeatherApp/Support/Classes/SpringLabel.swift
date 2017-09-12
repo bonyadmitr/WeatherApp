@@ -8,7 +8,7 @@
 
 import UIKit
 
-// swiftlint:disable vertical_parameter_alignment_on_call
+// superfluous_disable_command vertical_parameter_alignment_on_call
 open class SpringLabel: UILabel {
     
     open lazy var duration = 0.1

@@ -3,97 +3,51 @@
 import Foundation
 
 // swiftlint:disable file_length
-// swiftlint:disable line_length
 
-// swiftlint:disable type_body_length
+// swiftlint:disable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 enum L10n {
   /// All
-  case all
+  static let all = L10n.tr("Localizable", "all")
   /// Bold
-  case bold
+  static let bold = L10n.tr("Localizable", "bold")
   /// Cancel
-  case cancel
+  static let cancel = L10n.tr("Localizable", "cancel")
   /// Colors
-  case colors
+  static let colors = L10n.tr("Localizable", "colors")
   /// Default
-  case `default`
+  static let `default` = L10n.tr("Localizable", "default")
   /// Fonts
-  case fonts
+  static let fonts = L10n.tr("Localizable", "fonts")
   /// Light
-  case light
+  static let light = L10n.tr("Localizable", "light")
   /// Enter new city
-  case newCity
+  static let newCity = L10n.tr("Localizable", "new_city")
   /// Not found
-  case notFound
+  static let notFound = L10n.tr("Localizable", "not_found")
   /// Pull to refresh
-  case pullRefresh
+  static let pullRefresh = L10n.tr("Localizable", "pull_refresh")
   /// Regular
-  case regular
+  static let regular = L10n.tr("Localizable", "regular")
   /// Search
-  case search
+  static let search = L10n.tr("Localizable", "search")
   /// Select color
-  case selectColor
+  static let selectColor = L10n.tr("Localizable", "select_color")
   /// Select font
-  case selectFont
+  static let selectFont = L10n.tr("Localizable", "select_font")
   /// Select language
-  case selectLanguage
+  static let selectLanguage = L10n.tr("Localizable", "select_language")
   /// Settings
-  case settings
+  static let settings = L10n.tr("Localizable", "settings")
   /// Weather App
-  case weatherApp
+  static let weatherApp = L10n.tr("Localizable", "weather_app")
 }
-// swiftlint:enable type_body_length
+// swiftlint:enable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 
-extension L10n: CustomStringConvertible {
-  var description: String { return self.string }
-
-  var string: String {
-    switch self {
-      case .all:
-        return L10n.tr(key: "all")
-      case .bold:
-        return L10n.tr(key: "bold")
-      case .cancel:
-        return L10n.tr(key: "cancel")
-      case .colors:
-        return L10n.tr(key: "colors")
-      case .`default`:
-        return L10n.tr(key: "default")
-      case .fonts:
-        return L10n.tr(key: "fonts")
-      case .light:
-        return L10n.tr(key: "light")
-      case .newCity:
-        return L10n.tr(key: "new_city")
-      case .notFound:
-        return L10n.tr(key: "not_found")
-      case .pullRefresh:
-        return L10n.tr(key: "pull_refresh")
-      case .regular:
-        return L10n.tr(key: "regular")
-      case .search:
-        return L10n.tr(key: "search")
-      case .selectColor:
-        return L10n.tr(key: "select_color")
-      case .selectFont:
-        return L10n.tr(key: "select_font")
-      case .selectLanguage:
-        return L10n.tr(key: "select_language")
-      case .settings:
-        return L10n.tr(key: "settings")
-      case .weatherApp:
-        return L10n.tr(key: "weather_app")
-    }
-  }
-
-  private static func tr(key: String, _ args: CVarArg...) -> String {
-    let format = NSLocalizedString(key, bundle: Bundle(for: BundleToken.self), comment: "")
+extension L10n {
+  fileprivate static func tr(_ table: String, _ key: String, _ args: CVarArg...) -> String {
+    let format = NSLocalizedString(key, tableName: table, bundle: Bundle(for: BundleToken.self), comment: "")
     return String(format: format, locale: Locale.current, arguments: args)
   }
-}
-
-func tr(_ key: L10n) -> String {
-  return key.string
 }
 
 private final class BundleToken {}
