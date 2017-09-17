@@ -12,7 +12,7 @@ func log(_ closure: @autoclosure () -> Any?, functionName: String = #function, f
     Logger.shared.log(closure, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
 }
 
-final class Logger {
+final public class Logger {
     
     static let shared = Logger()
     

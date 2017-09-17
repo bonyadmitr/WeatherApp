@@ -24,7 +24,7 @@ extension Alamofire.DataRequest {
         return Promise { fulfill, reject in
             response { (response) in
                 guard let error = response.error else {
-                    return fulfill()
+                    return fulfill(())
                 }
                 reject(self.extractError(ofType: E.self, fromError: error, responseData: response.data))
             }.log()
@@ -107,7 +107,7 @@ extension Alamofire.DataRequest {
                     guard let totalString = response.response?.allHeaderFields[totalCountHeader] as? String, let total = Int(totalString) else {
                         return reject(MissingHeaderError(key: totalCountHeader))
                     }
-                    fulfill(objects, total)
+                    fulfill((objects, total))
                 case .failure(let error):
                     reject(self.extractError(ofType: E.self, fromError: error, responseData: response.data))
                 }

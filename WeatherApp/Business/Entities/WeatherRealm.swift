@@ -12,12 +12,12 @@ import ObjectMapper
 
 class WeatherCommonRealm: BaseRealmObject {
     
-    dynamic var temperature: Double = 0
-    dynamic var pressure: Double = 0
-    dynamic var humidity: Int = 0
-    dynamic var windSpeed: Double = 0
-    dynamic var icon: String = ""
-    dynamic var info: String = ""
+    @objc dynamic var temperature: Double = 0
+    @objc dynamic var pressure: Double = 0
+    @objc dynamic var humidity: Int = 0
+    @objc dynamic var windSpeed: Double = 0
+    @objc dynamic var icon: String = ""
+    @objc dynamic var info: String = ""
     
     convenience init(simple: WeatherCommon) {
         self.init()
@@ -42,7 +42,7 @@ class WeatherCommonRealm: BaseRealmObject {
 }
 
 final class WeatherCurrentRealm: WeatherCommonRealm {
-    dynamic var visibility: Int = 0
+    @objc dynamic var visibility: Int = 0
     
     convenience init(simple: WeatherCurrent) {
         self.init()
@@ -70,7 +70,7 @@ final class WeatherCurrentRealm: WeatherCommonRealm {
 }
 
 final class WeatherForecastRealm: WeatherCommonRealm {
-    dynamic var dateInterval: Int = 0
+    @objc dynamic var dateInterval: Int = 0
     
     convenience init(simple: WeatherForecast) {
         self.init()

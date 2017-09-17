@@ -80,6 +80,11 @@ class SettingsBundleManager: NSObject {
         UserDefaults.standard.removeObserver(self, forKeyPath: DefaultKeys.analyticsEnabled)
     }
 
+    // TODO: Check new syntax ! #3
+//    func observe<Value>(_ keyPath: KeyPath<SettingsBundleManager, Value>, options: NSKeyValueObservingOptions, changeHandler: @escaping (SettingsBundleManager, NSKeyValueObservedChange<Value>) -> Void) -> NSKeyValueObservation {
+//
+//    }
+    
     /// #2
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         

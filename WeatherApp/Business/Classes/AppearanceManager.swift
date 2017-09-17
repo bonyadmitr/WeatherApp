@@ -79,8 +79,8 @@ struct AppearanceManager {
         
         
         UINavigationBar.appearance().titleTextAttributes = [
-            NSFontAttributeName: Fonts.base.font(with: 20),
-            NSForegroundColorAttributeName: Colors.text
+            NSAttributedStringKey.font: Fonts.base.font(with: 20),
+            NSAttributedStringKey.foregroundColor: Colors.text
         ]
         
         /// shadow line off.
@@ -96,7 +96,7 @@ struct AppearanceManager {
     }
     
     func configureBarButtonItem() {
-        let attr: [String: Any] = [NSFontAttributeName: Fonts.base.font(with: 18)]
+        let attr: [NSAttributedStringKey: Any] = [NSAttributedStringKey.font: Fonts.base.font(with: 18)]
 //                                   NSForegroundColorAttributeName: Colors.text
         UIBarButtonItem.appearance().setTitleTextAttributes(attr, for: .normal)
         
@@ -123,7 +123,7 @@ struct AppearanceManager {
         UISearchBar.appearance().textColor = Colors.main
         
         /// text font
-        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSFontAttributeName: Fonts.base.font(with: 18)]
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedStringKey.font.rawValue: Fonts.base.font(with: 18)]
         
         /// placeholder color
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).placeholderColor = Colors.main

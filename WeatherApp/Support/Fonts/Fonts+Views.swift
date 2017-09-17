@@ -53,8 +53,7 @@ extension UITextField {
             }
             font = type.font(with: font!.pointSize)
             
-            let att: [String : Any] = [NSForegroundColorAttributeName: placeholderColor ?? Colors.text,
-                                       NSFontAttributeName: font!]
+            let att: [NSAttributedStringKey: Any] = [NSAttributedStringKey.foregroundColor: placeholderColor ?? Colors.text, NSAttributedStringKey.font: font!]
             attributedPlaceholder = NSAttributedString(string: placeholder ?? "", attributes: att)
         }
     }

@@ -28,13 +28,14 @@ extension String {
     }
     
     subscript(to i: Int) -> String {
+//        self[..<3]
         return substring(to: index(from: i))
     }
     
     subscript(r: CountableRange<Int>) -> String {
         let start = index(from: r.lowerBound)
         let end = index(from: r.upperBound)
-        return self[start..<end]
+        return String(self[start..<end])
     }
     
     subscript(r: CountableClosedRange<Int>) -> String {
