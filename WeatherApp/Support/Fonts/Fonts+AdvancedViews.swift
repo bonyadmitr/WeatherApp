@@ -49,7 +49,7 @@ extension UISegmentedControl {
     }
     
     func set(font: UIFont) {
-        let attr = [NSFontAttributeName: font]
+        let attr = [NSAttributedStringKey.font: font]
         setTitleTextAttributes(attr, for: .normal)
     }
 }
@@ -93,7 +93,7 @@ extension UIBarItem {
     }
     
     func set(font: UIFont) {
-        let attr = [NSFontAttributeName: font]
+        let attr = [NSAttributedStringKey.font: font]
         setTitleTextAttributes(attr, for: .normal)
     }
 }
@@ -137,6 +137,6 @@ extension UINavigationBar {
     }
     
     func set(font: UIFont) {
-        titleTextAttributes = [NSFontAttributeName: font]
+        titleTextAttributes = [NSAttributedStringKey.font: font]
     }
 }

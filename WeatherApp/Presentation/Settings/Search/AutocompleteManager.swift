@@ -39,7 +39,9 @@ private final class AutocompleteManager2 {
     
     let localSearchRequest = MKLocalSearchRequest()
     
-    lazy var localSearch: MKLocalSearch = MKLocalSearch(request: self.localSearchRequest)
+    lazy var localSearch: MKLocalSearch = {
+        MKLocalSearch(request: self.localSearchRequest)
+    }()
     
     func startSearch(with searchText: String, completion: @escaping ([MKMapItem]) -> Void) {
         localSearchRequest.naturalLanguageQuery = searchText

@@ -12,7 +12,7 @@ func log(_ closure: @autoclosure () -> Any?, functionName: String = #function, f
     Logger.shared.log(closure, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
 }
 
-final class Logger {
+final public class Logger {
     
     static let shared = Logger()
     
@@ -97,5 +97,16 @@ final class Logger {
         
         res += String(describing: closure() ?? "nil")
         print(res)
+    }
+}
+
+
+import RealmSwift
+extension Logger {
+    func printRealmFilePath() {
+        let realmFilePath = Realm.Configuration.defaultConfiguration.fileURL?.deletingLastPathComponent().absoluteString
+        let strLength = 7 /// "file://".characters.count
+        let removedFilePath = realmFilePath?[from: strLength] ?? "Realm path is nil"
+        log("Realm database is here: \(removedFilePath)")
     }
 }

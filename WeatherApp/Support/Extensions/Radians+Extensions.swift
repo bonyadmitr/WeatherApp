@@ -8,7 +8,7 @@
 
 import CoreGraphics
 
-extension Int {
+extension IntegerLiteralType {
     var radians: CGFloat { return CGFloat(self) * .pi / 180 }
 }
 extension FloatingPoint {

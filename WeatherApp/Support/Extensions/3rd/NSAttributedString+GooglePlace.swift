@@ -15,9 +15,9 @@ extension NSAttributedString {
         
         let bolded = mutableCopy() as! NSMutableAttributedString
         let range = NSRange(location: 0, length: bolded.length)
-        bolded.enumerateAttribute(kGMSAutocompleteMatchAttribute, in: range) { (value, range, _) in
+        bolded.enumerateAttribute(NSAttributedStringKey(rawValue: kGMSAutocompleteMatchAttribute), in: range) { (value, range, _) in
             let font = (value == nil) ? regularFont : boldFont
-            bolded.addAttribute(NSFontAttributeName, value: font, range: range)
+            bolded.addAttribute(NSAttributedStringKey.font, value: font, range: range)
         }
         return bolded
     }

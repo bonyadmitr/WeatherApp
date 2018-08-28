@@ -23,7 +23,7 @@ final class MainView: UIView {
     }
     
     private func setup() {
-        emitter = Emitter.getLayerWith(cells: [Emitter.getCell()], width: frame.width)
+        emitter = CAEmitterLayer() //Emitter.getLayerWith(cells: [Emitter.getCell()], width: frame.width)
         layer.insertSublayer(emitter, at: 0)
     }
     

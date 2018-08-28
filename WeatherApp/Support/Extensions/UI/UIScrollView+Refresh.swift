@@ -28,7 +28,7 @@ extension UIScrollView {
         
         if let title = title {
             if let color = color {
-                let attr = [NSForegroundColorAttributeName: color]
+                let attr = [NSAttributedStringKey.foregroundColor: color]
                 refresher.attributedTitle = NSAttributedString(string: title, attributes: attr)
                 refresher.tintColor = color
             } else {

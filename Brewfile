@@ -48,10 +48,14 @@ brew 'swiftgen'
 
 ## All
 
-brew "cloc"
+## count lines of code
+brew 'cloc'
+
+## optimize png files
+brew 'pngcrush'
 
 ## Ruby
-#brew "rbenv"
+#brew 'rbenv'
 
 #brew 'zsh'
 #cask 'atom'

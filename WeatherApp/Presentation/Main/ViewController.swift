@@ -12,9 +12,9 @@ import Kingfisher
 
 final class ViewController: BackgroundController {
     
-    @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet weak var cityLabel: UILabel!
-    @IBOutlet weak var tempratureLabel: UILabel!
+    @IBOutlet fileprivate weak var tableView: UITableView!
+    @IBOutlet fileprivate weak var cityLabel: UILabel!
+    @IBOutlet fileprivate weak var tempratureLabel: UILabel!
     
     private let dataSource = ForecastDisplayManager()
     private var text = ""
@@ -26,7 +26,7 @@ final class ViewController: BackgroundController {
         
         dataSource.tableView = tableView
         
-        tableView.addRefreshControl(title: tr(.pullRefresh), color: Colors.text) { [weak self] refreshControl in
+        tableView.addRefreshControl(title: L10n.pullRefresh, color: Colors.text) { [weak self] refreshControl in
             guard let guardSelf = self else { return }
             guardSelf.getCurrentWeather(for: guardSelf.text)
             guardSelf.getForecastWeather(for: guardSelf.text)
@@ -60,20 +60,21 @@ final class ViewController: BackgroundController {
         }.then { url -> Promise<UIImage> in
             ImageDownloader.default.downloadImage(with: url)
         }.then { image -> Void in
-            self.backImageView.image = image
-            Images.background = image
-        }
+            let img = image.image(for: self.backImageView.bounds.size)
+            self.backImageView.image = img
+            Images.background = img
+        }.catchAndLog()
     }
     
     private func getForecastWeather(for text: String) {
-        _ = WeatherService.shared.forecast(for: text).then { forecastResult -> Void in
-            self.dataSource.forecasts = forecastResult.list
+        WeatherService.shared.forecast(for: text) { forecast -> Void in
+            self.dataSource.forecasts = forecast
         }
     }
     
     private func getCurrentWeather(for text: String) {
         _ = WeatherService.shared.current(for: text).then { current -> Void in
             self.tempratureLabel.text = String(Int(current.temperature))
-        }
+        }.catchAndLog()
     }
 }

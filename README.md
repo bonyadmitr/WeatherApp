@@ -1,3 +1,7 @@
+## Demo
+
+[Try app at Appetize.io](https://appetize.io/app/j5z5kkhjuczebzqucgq1vdgvzm?device=iphone5s&scale=75&orientation=portrait&osVersion=10.3)
+
 ## To start project
 
 Enter project folder in terminal and run
@@ -38,6 +42,16 @@ Path for image: `fastlane/metadata/app_icon.png`
 bundle e fastlane appicons
 ```
 
+#### Optimize png images in project folder
+
+```bash
+# for first run:
+chmod +x ./Scripts/pngcrush.sh; ./Scripts/pngcrush.sh
+
+# and others:
+./Scripts/pngcrush.sh
+```
+
 #### Update Carthage dependencies and install new ones
 
 ```bash
@@ -61,7 +75,6 @@ bundle e fastlane clocc
 # or
 cloc ./WeatherApp
 ```
-
 
 ## To do
 

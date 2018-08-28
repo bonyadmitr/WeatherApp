@@ -10,7 +10,7 @@ import UIKit
 
 class ForecastDisplayManager: NSObject {
     
-    @IBOutlet weak var tableView: UITableView! {
+    weak var tableView: UITableView! {
         didSet { tableView.dataSource = self }
     }
     

@@ -9,21 +9,16 @@
 import PromiseKit
 
 extension Promise {
-    
-    func catchAndShow(with title: String = "") {
+    func catchAndLog(functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) {
         self.catch { error in
-            print(error.localizedDescription)
-//            ErrorHandler.catch(error, title: title)
+            
+            var res = "⚠️ catchAndLog in "
+            let file = (fileName as NSString).lastPathComponent
+            let line = ":\(lineNumber)"
+            res += "[\(file)\(line)] "
+            res += "\(functionName) ⚠️\n"
+            
+            print(res, error)
         }
     }
-    
-    func catchAndLog() {
-        self.catch { error in
-            switch error {
-            default:
-                print(error)
-            }
-        }
-    }
-    
 }

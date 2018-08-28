@@ -10,13 +10,13 @@ import UIKit
 
 class ForecastCell: UITableViewCell {
     
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var temperatureLabel: UILabel!
-    @IBOutlet weak var pressureLabel: UILabel!
-    @IBOutlet weak var humidityLabel: UILabel!
-    @IBOutlet weak var windSpeedLabel: UILabel!
-    @IBOutlet weak var iconLabel: UILabel!
-    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet fileprivate weak var dateLabel: UILabel!
+    @IBOutlet fileprivate weak var temperatureLabel: UILabel!
+    @IBOutlet fileprivate weak var pressureLabel: UILabel!
+    @IBOutlet fileprivate weak var humidityLabel: UILabel!
+    @IBOutlet fileprivate weak var windSpeedLabel: UILabel!
+    @IBOutlet fileprivate weak var iconLabel: UILabel!
+    @IBOutlet fileprivate weak var infoLabel: UILabel!
     
     let formatter = DateFormatter()
     

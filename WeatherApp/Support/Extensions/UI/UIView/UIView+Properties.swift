@@ -9,6 +9,13 @@
 import UIKit
 
 extension UIView {
+    @IBInspectable var exclusiveTap: Bool {
+        get { return isExclusiveTouch }
+        set { isExclusiveTouch = newValue }
+    }
+}
+
+extension UIView {
     @IBInspectable var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius

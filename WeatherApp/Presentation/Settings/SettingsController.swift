@@ -11,8 +11,8 @@ import Alamofire
 
 final class SettingsController: UIViewController {
     
-    @IBOutlet private weak var searchContainerView: UIView!
-    @IBOutlet weak var appPicker: AppIconPicker!
+    @IBOutlet fileprivate weak var searchContainerView: UIView!
+    @IBOutlet fileprivate weak var appPicker: AppIconPicker!
     
     fileprivate var searchController: SearchController!
     fileprivate var placesController = PlacesController()
@@ -23,7 +23,10 @@ final class SettingsController: UIViewController {
         
         setupSearchController()
         FontPickerManager.shared.delegates.add(self)
-        
+        addAppPicker()
+    }
+    
+    private func addAppPicker() {
         if #available(*, iOS 10.3) {} else {
             appPicker.isHidden = true
         }
@@ -35,7 +38,7 @@ final class SettingsController: UIViewController {
         searchController = SearchController(searchResultsController: placesController)
         searchController.setup(in: self)
         searchController.addSearchBar(to: searchContainerView)
-        searchController.searchBar.placeholder = tr(.newCity)
+        searchController.searchBar.placeholder = L10n.newCity
         searchController.searchResultsUpdater = self
     }
     

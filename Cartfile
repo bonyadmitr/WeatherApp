@@ -1,5 +1,5 @@
 # Data base
-# github "realm/realm-cocoa"
+github "realm/realm-cocoa"
 
 # Async
 github "mxcl/PromiseKit" ~> 4.0
@@ -23,3 +23,6 @@ github "bonyadmitr/KeyboardHideManager" "develop"
 
 # UI Tests
 github "shinydevelopment/SimulatorStatusMagic"
+
+# DI
+github "AliSoftware/Dip"

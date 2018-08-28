@@ -24,7 +24,7 @@ public enum LogLevel {
 }
 
 extension DataRequest {
-    static var logger: Logger {
+    public static var logger: Logger {
         return Logger.shared
     }
 }
